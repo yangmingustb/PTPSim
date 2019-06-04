@@ -1,0 +1,564 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="b40da164-17d1-4821-81af-e1735b0636b3" name="Default" comment="" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="TRACKING_ENABLED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileEditorManager">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
+      <file leaf-file-name="VelocityProfileGenerator.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/TrajectoryPlanning/VelocityProfileGenerator.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="154">
+              <caret line="237" column="33" lean-forward="true" selection-start-line="237" selection-start-column="33" selection-end-line="237" selection-end-column="33" />
+              <folding>
+                <element signature="e#0#18#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="VelocityProfileLattice.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/TrajectoryPlanning/VelocityProfileLattice.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="132">
+              <caret line="56" column="12" lean-forward="true" selection-start-line="56" selection-start-column="12" selection-end-line="56" selection-end-column="12" />
+              <folding>
+                <element signature="e#49#67#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="VelocityProfilePlanner.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/TrajectoryPlanning/VelocityProfilePlanner.py">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file leaf-file-name="CubicSpiral.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/TrajectoryPlanning/CubicSpiral.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="6820">
+              <caret line="313" column="35" selection-start-line="313" selection-start-column="35" selection-end-line="313" selection-end-column="35" />
+              <folding>
+                <element signature="e#399#417#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Python Script" />
+      </list>
+    </option>
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/model_predictive_trajectory_generator.py" />
+        <option value="$PROJECT_DIR$/motion_model2.py" />
+        <option value="$PROJECT_DIR$/motion_model.py" />
+        <option value="$PROJECT_DIR$/test1" />
+        <option value="$PROJECT_DIR$/lattice.py" />
+        <option value="$PROJECT_DIR$/velocity_generator.py" />
+        <option value="$PROJECT_DIR$/velocity_lattice.py" />
+        <option value="$PROJECT_DIR$/path_searcher.py" />
+        <option value="$PROJECT_DIR$/velocity_searcher.py" />
+        <option value="$PROJECT_DIR$/path_optimizer.py" />
+        <option value="$PROJECT_DIR$/velocity_optimizer.py" />
+        <option value="$PROJECT_DIR$/em_motion_planner.py" />
+        <option value="$PROJECT_DIR$/test1.py" />
+        <option value="$PROJECT_DIR$/../PathPlanning/Dijkstra/dijkstra.py" />
+        <option value="$PROJECT_DIR$/cost_function.py" />
+        <option value="$PROJECT_DIR$/model_predictive_trajectory_generator2.py" />
+        <option value="$PROJECT_DIR$/path_lattice.py" />
+        <option value="$PROJECT_DIR$/path_planner.py" />
+        <option value="$PROJECT_DIR$/Trajectory Planning/PathPlanner.py" />
+        <option value="$PROJECT_DIR$/Trajectory Planning/PathLattice.py" />
+        <option value="$PROJECT_DIR$/Map/test1.py" />
+        <option value="$PROJECT_DIR$/StaticObs/StaticObs.py" />
+        <option value="$PROJECT_DIR$/Obstacles/DynamicObs.py" />
+        <option value="$PROJECT_DIR$/Obstacles/StaticObs.py" />
+        <option value="$PROJECT_DIR$/Map/TwoLane.py" />
+        <option value="$PROJECT_DIR$/Map/CurveLane.py" />
+        <option value="$PROJECT_DIR$/TrajectoryPlanning/test1.py" />
+        <option value="$PROJECT_DIR$/TrajectoryPlanning/ModelPredictiveTrajectoryGenerator.py" />
+        <option value="$PROJECT_DIR$/TrajectoryPlanning/PathPlanner.py" />
+        <option value="$PROJECT_DIR$/TrajectoryPlanning/PathLattice.py" />
+        <option value="$PROJECT_DIR$/TrajectoryPlanning/VelocityProfileLattice.py" />
+        <option value="$PROJECT_DIR$/TrajectoryPlanning/VelocityProfileGenerator.py" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="138" />
+    <option name="y" value="180" />
+    <option name="width" value="1401" />
+    <option name="height" value="1001" />
+  </component>
+  <component name="ProjectView">
+    <navigator proportions="" version="1">
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="PlanningSim" type="b2602c69:ProjectViewProjectNode" />
+              <item name="PlanningSim" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="PlanningSim" type="b2602c69:ProjectViewProjectNode" />
+              <item name="PlanningSim" type="462c0819:PsiDirectoryNode" />
+              <item name="TrajectoryPlanning" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+      <pane id="Scope" />
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../PlanningSim 2" />
+    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
+  </component>
+  <component name="PyConsoleOptionsProvider">
+    <option name="myPythonConsoleState">
+      <console-settings module-name="PlanningSim" is-module-sdk="true">
+        <option name="myUseModuleSdk" value="true" />
+        <option name="myModuleName" value="PlanningSim" />
+      </console-settings>
+    </option>
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\win10\Desktop\Planning\Trajectory Planning" />
+    </key>
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager" selected="Python.VelocityProfileLattice">
+    <configuration name="PathLattice" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="PlanningSim" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/TrajectoryPlanning" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/TrajectoryPlanning/PathLattice.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+    </configuration>
+    <configuration name="PathPlanner" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="PlanningSim" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/TrajectoryPlanning" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/TrajectoryPlanning/PathPlanner.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+    </configuration>
+    <configuration name="Unnamed" type="PythonConfigurationType" factoryName="Python">
+      <module name="PlanningSim" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="C:\Program Files\Anaconda3\python.exe" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/TrajectoryPlanning" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/TrajectoryPlanning/CubicSpiral.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+    </configuration>
+    <configuration name="VelocityProfileGenerator" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="PlanningSim" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/TrajectoryPlanning" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/TrajectoryPlanning/VelocityProfileGenerator.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+    </configuration>
+    <configuration name="VelocityProfileLattice" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="PlanningSim" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/TrajectoryPlanning" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/TrajectoryPlanning/VelocityProfileLattice.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+    </configuration>
+    <configuration name="test1" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="PlanningSim" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/TrajectoryPlanning" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/TrajectoryPlanning/test1.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+    </configuration>
+    <list>
+      <item itemvalue="Python.Unnamed" />
+      <item itemvalue="Python.VelocityProfileGenerator" />
+      <item itemvalue="Python.test1" />
+      <item itemvalue="Python.PathLattice" />
+      <item itemvalue="Python.PathPlanner" />
+      <item itemvalue="Python.VelocityProfileLattice" />
+    </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Python.VelocityProfileLattice" />
+        <item itemvalue="Python.VelocityProfileGenerator" />
+        <item itemvalue="Python.PathPlanner" />
+        <item itemvalue="Python.PathLattice" />
+        <item itemvalue="Python.test1" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="b40da164-17d1-4821-81af-e1735b0636b3" name="Default" comment="" />
+      <created>1551500498143</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1551500498143</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="TestHistory">
+    <history-entry file="py_test_in_model_predictive_trajectory_generator2_py - 2019.03.02 at 19h 09m 50s.xml">
+      <configuration name="py.test in model_predictive_trajectory_generator2.py" configurationId="tests" />
+    </history-entry>
+    <history-entry file="py_test_in_model_predictive_trajectory_generator2_py - 2019.03.02 at 19h 10m 03s.xml">
+      <configuration name="py.test in model_predictive_trajectory_generator2.py" configurationId="tests" />
+    </history-entry>
+    <history-entry file="py_test_in_model_predictive_trajectory_generator2_py - 2019.03.02 at 19h 22m 29s.xml">
+      <configuration name="py.test in model_predictive_trajectory_generator2.py" configurationId="tests" />
+    </history-entry>
+    <history-entry file="py_test_in_model_predictive_trajectory_generator_py - 2019.03.02 at 19h 41m 07s.xml">
+      <configuration name="py.test in model_predictive_trajectory_generator.py" configurationId="tests" />
+    </history-entry>
+    <history-entry file="py_test_in_CubicSpiral_py - 2019.04.05 at 11h 18m 27s.xml">
+      <configuration name="py.test in CubicSpiral.py" configurationId="tests" />
+    </history-entry>
+    <history-entry file="py_test_in_CubicSpiral_py - 2019.04.05 at 11h 18m 45s.xml">
+      <configuration name="py.test in CubicSpiral.py" configurationId="tests" />
+    </history-entry>
+    <history-entry file="py_test_in_CubicSpiral_py - 2019.04.05 at 11h 18m 56s.xml">
+      <configuration name="py.test in CubicSpiral.py" configurationId="tests" />
+    </history-entry>
+    <history-entry file="py_test_in_CubicSpiral_py - 2019.04.05 at 11h 20m 31s.xml">
+      <configuration name="py.test in CubicSpiral.py" configurationId="tests" />
+    </history-entry>
+    <history-entry file="py_test_in_CubicSpiral_py - 2019.04.05 at 11h 21m 35s.xml">
+      <configuration name="py.test in CubicSpiral.py" configurationId="tests" />
+    </history-entry>
+    <history-entry file="py_test_in_CubicSpiral_py - 2019.04.05 at 11h 23m 09s.xml">
+      <configuration name="py.test in CubicSpiral.py" configurationId="tests" />
+    </history-entry>
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="86" y="-7" width="1201" height="735" extended-state="6" />
+    <editor active="true" />
+    <layout>
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2611626" />
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.5005952" side_tool="true" weight="0.18151072" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49940476" weight="0.3035144" />
+      <window_info anchor="bottom" id="Version Control" order="9" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Python Console" order="7" weight="0.32945284" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info anchor="bottom" id="Terminal" order="8" weight="0.32945284" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.32038835" />
+      <window_info id="Favorites" order="2" side_tool="true" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Find" order="1" />
+    </layout>
+  </component>
+  <component name="VcsContentAnnotationSettings">
+    <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <option name="time" value="23" />
+    </breakpoint-manager>
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/motion_model2.py" />
+    <entry file="file://$PROJECT_DIR$/motion_model.py" />
+    <entry file="file://$PROJECT_DIR$/motion_model2.py" />
+    <entry file="file://$PROJECT_DIR$/model_predictive_trajectory_generator2.py" />
+    <entry file="file://$PROJECT_DIR$/motion_model2.py" />
+    <entry file="file://$PROJECT_DIR$/model_predictive_trajectory_generator2.py" />
+    <entry file="file://$PROJECT_DIR$/motion_model2.py" />
+    <entry file="file://$USER_HOME$/算法python/test1/motion_model.py" />
+    <entry file="file://C:/Program Files/Anaconda3/Lib/site-packages/_pytest/vendored_packages/pluggy.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="157">
+          <caret line="723" selection-start-line="723" selection-end-line="723" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://C:/Program Files/Anaconda3/Lib/site-packages/_pytest/runner.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="157">
+          <caret line="287" selection-start-line="287" selection-end-line="287" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://C:/Program Files/Anaconda3/Lib/site-packages/_pytest/python.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="297">
+          <caret line="1967" selection-start-line="1967" selection-end-line="1967" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://C:/Program Files/Anaconda3/Lib/site-packages/_pytest/main.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="275">
+          <caret line="457" selection-start-line="457" selection-end-line="457" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://C:/Program Files/Anaconda3/Lib/site-packages/py/_path/common.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="329">
+          <caret line="216" selection-start-line="216" selection-end-line="216" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://C:/Program Files/Anaconda3/Lib/site-packages/py/_path/local.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="275">
+          <caret line="580" selection-start-line="580" selection-end-line="580" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://C:/Program Files/Anaconda3/Lib/site-packages/_pytest/assertion/rewrite.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="277">
+          <caret line="174" selection-start-line="174" selection-end-line="174" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/算法python/三次曲线.py" />
+    <entry file="file://$APPLICATION_HOME_DIR$/helpers/pydev/_pydevd_bundle/pydevd_breakpoints.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="182">
+          <caret line="108" selection-start-line="108" selection-end-line="108" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://C:/Program Files/Anaconda3/Lib/site-packages/scipy/integrate/quadpack.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1248">
+          <caret line="370" column="31" lean-forward="true" selection-start-line="370" selection-start-column="31" selection-end-line="370" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../PathPlanning/ModelPredictiveTrajectoryGenerator/model_predictive_trajectory_generator2.py" />
+    <entry file="file://$PROJECT_DIR$/motion_model2.py" />
+    <entry file="file://$PROJECT_DIR$/motion_model.py" />
+    <entry file="file://$PROJECT_DIR$/../算法python/三次曲线.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="352">
+          <caret line="40" lean-forward="true" selection-start-line="40" selection-end-line="40" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/model_predictive_trajectory_generator.py" />
+    <entry file="file://$PROJECT_DIR$/lattice.py" />
+    <entry file="file://$PROJECT_DIR$/test1" />
+    <entry file="file://$USER_HOME$/.PyCharmCE2018.1/system/python_stubs/-1282051629/builtins.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="276">
+          <caret line="800" column="8" selection-start-line="800" selection-start-column="8" selection-end-line="800" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test1.py" />
+    <entry file="file://$PROJECT_DIR$/../PathPlanning/Dijkstra/dijkstra.py" />
+    <entry file="file://$PROJECT_DIR$/../算法python/DWA.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-6199" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/cost_function.py" />
+    <entry file="file://$PROJECT_DIR$/model_predictive_trajectory_generator2.py" />
+    <entry file="file://$PROJECT_DIR$/path_lattice.py" />
+    <entry file="file://$PROJECT_DIR$/path_planner.py" />
+    <entry file="file://$PROJECT_DIR$/Trajectory Planning/PathPlanner.py" />
+    <entry file="file://$PROJECT_DIR$/Trajectory Planning/MotionModel.py" />
+    <entry file="file://$PROJECT_DIR$/Trajectory Planning/PathLattice.py" />
+    <entry file="file://$PROJECT_DIR$/../PathPlanning/FrenetOptimalTrajectory/frenet_optimal_trajectory.py" />
+    <entry file="file://$PROJECT_DIR$/StaticObs/StaticObs.py" />
+    <entry file="file://$PROJECT_DIR$/Obstacles/StaticObs.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-951">
+          <caret line="7" column="32" lean-forward="true" selection-start-line="7" selection-start-column="32" selection-end-line="7" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Map/TwoLane.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="132">
+          <caret line="6" column="36" lean-forward="true" selection-start-line="6" selection-start-column="36" selection-end-line="6" selection-end-column="36" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Map/CurveLane.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="141">
+          <caret line="38" column="27" lean-forward="true" selection-start-line="38" selection-start-column="27" selection-end-line="38" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/TrajectoryPlanning/LookupTableGenerator.py" />
+    <entry file="file://$PROJECT_DIR$/TrajectoryPlanning/CostFunction.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-440">
+          <caret line="2" column="3" lean-forward="true" selection-start-line="2" selection-start-column="3" selection-end-line="2" selection-end-column="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/TrajectoryPlanning/test1.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="528">
+          <caret line="29" column="19" selection-start-line="29" selection-start-column="19" selection-end-line="29" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/TrajectoryPlanning/PathLattice.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1012">
+          <caret line="46" column="33" lean-forward="true" selection-start-line="46" selection-start-column="33" selection-end-line="46" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/TrajectoryPlanning/PathPlanner.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-330">
+          <caret line="51" column="24" lean-forward="true" selection-start-line="51" selection-start-column="24" selection-end-line="51" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://C:/Program Files/Anaconda3/Lib/codecs.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="304">
+          <caret line="310" selection-start-line="310" selection-end-line="310" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/TrajectoryPlanning/CubicSpiral.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="6820">
+          <caret line="313" column="35" selection-start-line="313" selection-start-column="35" selection-end-line="313" selection-end-column="35" />
+          <folding>
+            <element signature="e#399#417#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/TrajectoryPlanning/VelocityProfileGenerator.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="154">
+          <caret line="237" column="33" lean-forward="true" selection-start-line="237" selection-start-column="33" selection-end-line="237" selection-end-column="33" />
+          <folding>
+            <element signature="e#0#18#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/TrajectoryPlanning/VelocityProfileLattice.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="132">
+          <caret line="56" column="12" lean-forward="true" selection-start-line="56" selection-start-column="12" selection-end-line="56" selection-end-column="12" />
+          <folding>
+            <element signature="e#49#67#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/TrajectoryPlanning/VelocityProfilePlanner.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+  </component>
+</project>
