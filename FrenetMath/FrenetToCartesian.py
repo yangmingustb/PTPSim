@@ -10,6 +10,12 @@ def frenetToXY(s, rho, thetaRho, efficients):
 
 
 def findEfficients(s, efficients):
+	"""
+
+	:param s:
+	:param efficients:
+	:return: pose of reference line
+	"""
 
 	s_id = 0
 	for i in range(len(efficients)):

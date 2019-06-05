@@ -41,6 +41,14 @@ left = 1
 
 
 def wayPointDistribution(rx, ry, ryaw, s):
+	"""
+
+	:param rx:
+	:param ry:
+	:param ryaw:
+	:param s:
+	:return: generate the efficients of the reference line
+	"""
 
 	x_list = []
 	y_list = []
