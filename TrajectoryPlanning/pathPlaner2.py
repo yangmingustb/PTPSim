@@ -281,5 +281,5 @@ if __name__ == '__main__':
 	plt.xlim(-1, 200)
 	plt.ylim(-4, 200)
 	# plt.savefig('/home/ming/桌面/PTPSim/SimGraph/pathPlannerXY_5_30_8_48.svg')
-	plt.savefig('/home/ming/桌面/PTPSim/SimGraph/pathPlannerXY_5_30_8_48.tiff', dpi=600)
+	plt.savefig('/home/ming/桌面/PTPSim/SimGraph/pathPlanner2_5_30_8_48.tiff', dpi=600)
 	plt.show()

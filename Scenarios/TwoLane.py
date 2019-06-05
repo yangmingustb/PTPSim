@@ -14,11 +14,11 @@ lane_width = 3.75
 
 def lane():
 
-	left_line = plt.plot([0, 100], [3.75, 3.75], color='black', linewidth=1, linestyle='-')
+	left_line = plt.plot([0, 100], [3.75, 3.75], color='black', linewidth=1.5, linestyle='-')
 	#   plt.plot([0, 100], [3.75 / 2, 3.75 / 2], color='r', linewidth='0.5', linestyle='--')
 	center_line = plt.plot([0, 100], [0, 0], color='black', linewidth=1, linestyle='--')
 	#   plt.plot([0, 100], [-3.75 / 2, -3.75 / 2], color='r', linewidth='0.5', linestyle='--')
-	right_line = plt.plot([0, 100], [-3.75, -3.75], color='black', linewidth=1, linestyle='-')
+	right_line = plt.plot([0, 100], [-3.75, -3.75], color='black', linewidth=1.5, linestyle='-')
 	plt.axis("equal")
 
 

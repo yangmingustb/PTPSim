@@ -9,7 +9,7 @@ import FrenetMath.FrenetToCartesian as fretoc
 
 
 
-#   reference_line = 0.0	# 参考线为道路中心线
+#   refLineRho = 0.0	# 参考线为道路中心线
 r_circle = 1.0
 d_circle = 2.0
 obstacle_inflation = 1.5

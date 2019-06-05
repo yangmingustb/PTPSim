@@ -85,6 +85,11 @@ rho_init_guess = np.zeros((1, n_s + 3))
 
 lane_width = 3.75
 refLineRho = lane_width*0.5
+# 障碍物表示
+static_obs = [[20, refLineRho-2], [40, refLineRho - 1], [70, refLineRho-2]]  # 障碍物的frenet坐标,
+
+# refLineRho = -2.0
+# static_obs = [[20, -2], [40, 2], [70, -2]]
 
 # 起点状态
 x0 = 0
@@ -99,9 +104,6 @@ x_init = [x0, y0, s0, rho0, theta0, kappa0]
 s = [i for i in np.arange(reso_s, (s_max + 4 * reso_s), reso_s)]
 
 # print("len(s)", len(s))
-
-# 障碍物表示
-static_obs = [[20, refLineRho-2], [40, refLineRho - 1], [70, refLineRho-2]]  # 障碍物的frenet坐标,
 
 rho_min_list = [rho_min for i in range(n_s+3)]
 rho_max_list = [rho_max for i in range(n_s+3)]
@@ -266,9 +268,9 @@ def plotGraph():
 	car.simVehicle([static_obs[2][0], static_obs[2][1]], 0 * math.pi / 180, 'r', 1)
 
 	plt.grid(linestyle="--", linewidth=0.5, alpha=1)
-	plt.title(r's-$\rho$ Graph', font1)
-	plt.xlabel('s (m)', font1)
-	plt.ylabel(r'$\rho$ (m)', font1)
+	plt.title('x-y Graph', font1)
+	plt.xlabel('x (m)', font1)
+	plt.ylabel('y (m)', font1)
 	plt.xticks(fontproperties='Times New Roman', fontsize=10)
 	plt.yticks(fontproperties='Times New Roman', fontsize=10)
 	# plt.xlim(-1, 110)
@@ -289,7 +291,7 @@ def plotGraph():
 	y2 = [min(kappa_list) for i in range(n_s + 1)]
 	plt.plot(s[0:n_s + 1], y, c= 'r', linestyle="--", linewidth=0.5, alpha=1)
 	plt.plot(s[0:n_s + 1], y2, c= 'r', linestyle="--", linewidth=0.5, alpha=1)
-	plt.title('kappa Profile', font1)
+	plt.title('Curvature Profile', font1)
 	plt.grid(linestyle="--", linewidth=0.5, alpha=1)
 	plt.xlabel('s (m)', font1)
 	plt.ylabel('kappa (1/m)', font1)
