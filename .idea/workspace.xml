@@ -3,14 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="b40da164-17d1-4821-81af-e1735b0636b3" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FrenetMath/referenceLine.py" beforeDir="false" afterPath="$PROJECT_DIR$/FrenetMath/referenceLine.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SimGraph/pathOptimizationKappa060413.svg" beforeDir="false" afterPath="$PROJECT_DIR$/SimGraph/pathOptimizationKappa060413.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SimGraph/pathOptimizationPath060414.svg" beforeDir="false" afterPath="$PROJECT_DIR$/SimGraph/pathOptimizationPath060414.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SimGraph/speed_sample2 - 副本 - 副本.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SimGraph/曲线 - 副本.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TrajectoryPlanning/PathOptimizer2.py" beforeDir="false" afterPath="$PROJECT_DIR$/TrajectoryPlanning/PathOptimizer2.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TrajectoryPlanning/PathOptimizerTest1.py" beforeDir="false" afterPath="$PROJECT_DIR$/TrajectoryPlanning/PathOptimizerTest1.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -203,7 +196,7 @@
     <session id="1448867436">
       <usages-collector id="statistics.file.extensions.open">
         <counts>
-          <entry key="md" value="1" />
+          <entry key="md" value="2" />
           <entry key="png" value="4" />
           <entry key="py" value="276" />
         </counts>
@@ -211,13 +204,13 @@
       <usages-collector id="statistics.file.types.open">
         <counts>
           <entry key="Image" value="4" />
-          <entry key="Markdown" value="1" />
+          <entry key="Markdown" value="2" />
           <entry key="Python" value="276" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="23" />
+          <entry key="project.closed" value="24" />
           <entry key="project.open.time.0" value="1" />
           <entry key="project.open.time.2" value="1" />
           <entry key="project.open.time.3" value="6" />
@@ -230,13 +223,13 @@
         <counts>
           <entry key="Python Console" value="82" />
           <entry key="dummy" value="53" />
-          <entry key="md" value="16" />
+          <entry key="md" value="20" />
           <entry key="py" value="10461" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="Markdown" value="16" />
+          <entry key="Markdown" value="20" />
           <entry key="PLAIN_TEXT" value="53" />
           <entry key="Python" value="10543" />
         </counts>
@@ -248,23 +241,14 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/TrajectoryPlanning/PathOptimizer.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-432">
-              <caret line="259" lean-forward="true" selection-start-line="259" selection-end-line="259" />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/TrajectoryPlanning/PathOptimizerTest1.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="339">
-              <caret line="277" column="49" selection-start-line="277" selection-start-column="49" selection-end-line="277" selection-end-column="49" />
-              <folding>
-                <element signature="e#1229#1249#0" expanded="true" />
-              </folding>
+        <entry file="file://$PROJECT_DIR$/README.md">
+          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+            <state split_layout="FIRST">
+              <first_editor relative-caret-position="486">
+                <caret line="18" lean-forward="true" selection-start-line="18" selection-end-line="18" />
+              </first_editor>
+              <second_editor />
             </state>
           </provider>
         </entry>
@@ -338,9 +322,9 @@
         <option value="$PROJECT_DIR$/Curves/cubic_spline.py" />
         <option value="$PROJECT_DIR$/control/MPC.py" />
         <option value="$PROJECT_DIR$/FrenetMath/referenceLine.py" />
-        <option value="$PROJECT_DIR$/README.md" />
         <option value="$PROJECT_DIR$/TrajectoryPlanning/PathOptimizer2.py" />
         <option value="$PROJECT_DIR$/TrajectoryPlanning/PathOptimizerTest1.py" />
+        <option value="$PROJECT_DIR$/README.md" />
       </list>
     </option>
   </component>
@@ -647,7 +631,7 @@
       <window_info id="Favorites" order="2" sideWeight="0.5022091" side_tool="true" weight="0.24448645" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32903227" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49716446" visible="true" weight="0.4903226" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49716446" weight="0.4903226" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.14408602" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -1021,13 +1005,20 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/README.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="232">
-            <caret line="20" column="105" selection-start-line="20" selection-start-column="105" selection-end-line="20" selection-end-column="105" />
-          </first_editor>
-          <second_editor />
+    <entry file="file://$PROJECT_DIR$/TrajectoryPlanning/PathOptimizer2.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-468">
+          <caret line="310" column="46" selection-start-line="310" selection-start-column="46" selection-end-line="310" selection-end-column="46" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/TrajectoryPlanning/PathOptimizerTest1.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="123">
+          <caret line="269" column="35" selection-start-line="269" selection-start-column="35" selection-end-line="269" selection-end-column="35" />
+          <folding>
+            <element signature="e#1229#1249#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1038,20 +1029,13 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/TrajectoryPlanning/PathOptimizer2.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-468">
-          <caret line="310" column="46" selection-start-line="310" selection-start-column="46" selection-end-line="310" selection-end-column="46" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/TrajectoryPlanning/PathOptimizerTest1.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="339">
-          <caret line="277" column="49" selection-start-line="277" selection-start-column="49" selection-end-line="277" selection-end-column="49" />
-          <folding>
-            <element signature="e#1229#1249#0" expanded="true" />
-          </folding>
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="FIRST">
+          <first_editor relative-caret-position="486">
+            <caret line="18" lean-forward="true" selection-start-line="18" selection-end-line="18" />
+          </first_editor>
+          <second_editor />
         </state>
       </provider>
     </entry>
