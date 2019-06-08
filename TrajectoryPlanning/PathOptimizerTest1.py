@@ -227,13 +227,12 @@ def plotGraph():
 	p1 = [0.2, 0.2, 0.7, 0.6]
 	plt.axes(p1)
 
-	rho_vector = ipoptSolver()
-	# plot trajectory
-	plt.plot(s, rho_vector, c='cyan', linestyle="-", linewidth=1, alpha=1, label='Refined path')
-
 	# 调用pathplanner的环境
 	pp.plotGraph()
 
+	rho_vector = ipoptSolver()
+	# plot trajectory
+	plt.plot(s, rho_vector, c='cyan', linestyle="-", linewidth=1, alpha=1, label='Refined path')
 
 	car.simVehicle([x_init[2], x_init[3]], 0 * math.pi / 180, 'g', 1)
 

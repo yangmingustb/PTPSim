@@ -250,6 +250,7 @@ def main():
 
 	sp = Spline2D(x, y)
 	s = np.arange(s0, sp.s[-1], ds)
+	print("s[-1]:", s[-1])
 
 	rx, ry, ryaw, rk = [], [], [], []
 	for i_s in s:
@@ -319,7 +320,7 @@ def main():
 	plt.yticks(fontproperties='Times New Roman', fontsize=10)
 	plt.plot(s, [np.rad2deg(iyaw) for iyaw in ryaw], "-r", label="yaw", linewidth= 0.5, alpha=0.8)
 	# plt.legend()
-	plt.savefig('/home/ming/桌面/PTPSim/SimGraph/circleRoad2_heading.svg')
+	plt.savefig('../SimGraph/circleRoad2_heading.svg')
 
 	plt.figure(figsize=(3.5, 3.5 * 0.4))  # 单位英寸， 3.5
 	plt.axes([0.2, 0.35, 0.75, 0.55])
@@ -336,7 +337,7 @@ def main():
 	plt.yticks(fontproperties='Times New Roman', fontsize=10)
 	plt.plot(s, rk, "-r", label="curvature", linewidth= 0.5, alpha=0.8)
 	# plt.legend()
-	plt.savefig('/home/ming/桌面/PTPSim/SimGraph/circleRoad2_kappa.svg')
+	plt.savefig('../SimGraph/circleRoad2_kappa.svg')
 
 
 def saveEfficients():

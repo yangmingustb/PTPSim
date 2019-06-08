@@ -598,11 +598,25 @@ def main():
         plt.ylabel("y (m)")
         plt.legend()
 
-        plt.subplots()
-        plt.plot(t, v, "-r", label="speed")
-        plt.grid(True)
-        plt.xlabel("Time [s]")
-        plt.ylabel("Speed [kmh]")
+        plt.figure(figsize=(3.5, 3.5 * 0.4))  # 单位英寸， 3.5
+        plt.rcParams['font.sans-serif'] = ['Times New Roman']  # 如果要显示中文字体，则在此处设为：SimHei
+        plt.axes([0.2, 0.35, 0.75, 0.45])
+        plt.grid(linestyle="--", linewidth=0.2, alpha=1)
+        # plt.xlim(-100, 500)
+        # plt.ylim(-100, 500)
+        font1 = {'family': 'Times New Roman',
+                 'weight': 'normal',
+                 'size': 10,
+                 }
+        plt.xlabel('Time (s)', font1)
+        plt.ylabel('Speed (Km/h)', font1)
+        plt.xticks(fontproperties='Times New Roman', fontsize=10)
+        plt.yticks(fontproperties='Times New Roman', fontsize=10)
+        # plt.legend()
+
+        plt.plot(t, v, "-r", label="speed", linewidth=0.5, alpha=0.8)
+        plt.title("Speed profile of the ego vehicle")
+        plt.savefig('../SimGraph/MPC_speed.tiff', dpi=600)
 
         plt.show()
 
@@ -631,12 +645,23 @@ def main2():
         plt.ylabel("y[m]")
         plt.legend()
 
-        plt.subplots()
-        plt.plot(t, v, "-r", label="speed")
-        plt.grid(True)
-        plt.xlabel("Time [s]")
-        plt.ylabel("Speed [kmh]")
+        plt.figure(figsize=(3.5, 3.5 * 0.4))  # 单位英寸， 3.5
+        plt.axes([0.2, 0.35, 0.75, 0.55])
+        plt.grid(linestyle="--", linewidth=0.2, alpha=1)
+        # plt.xlim(-100, 500)
+        # plt.ylim(-100, 500)
+        font1 = {'family': 'Times New Roman',
+                 'weight': 'normal',
+                 'size': 10,
+                 }
+        plt.xlabel('Time (s)', font1)
+        plt.ylabel('Speed (Km/h', font1)
+        plt.xticks(fontproperties='Times New Roman', fontsize=10)
+        plt.yticks(fontproperties='Times New Roman', fontsize=10)
+        # plt.legend()
 
+        plt.plot(t, v, "-r", label="speed", linewidth=0.5, alpha=0.8)
+        plt.savefig('../SimGraph/MPC_speed.tiff', dpi=600)
         plt.show()
 
 
