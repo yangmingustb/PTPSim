@@ -250,7 +250,7 @@ def plotGraph():
 	# plt.xlim(-1, 110)
 	# plt.ylim(-4, 4)
 	plt.legend(loc=0)  # 图例位置自动
-	plt.savefig('../SimGraph/pathOptimizationPath060414.svg')
+	plt.savefig('../SimGraph/pathOptimizationTestPath060414.svg')
 
 	plt.figure(figsize=(3.5, 3.5))  # 单位英寸， 3.5
 	font1 = {'family': 'Times New Roman', 'weight': 'normal', 'size': 10}
@@ -275,7 +275,7 @@ def plotGraph():
 	plt.xlim(-1, 110)
 	plt.ylim(-0.2, 0.2)
 	plt.legend(loc=0)  # 图例位置自动
-	plt.savefig('../SimGraph/pathOptimizationKappa060413.svg')
+	plt.savefig('../SimGraph/pathOptimizationTestKappa060413.svg')
 	plt.show()
 
 
