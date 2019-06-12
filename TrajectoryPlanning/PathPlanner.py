@@ -29,6 +29,8 @@ SOFTWARE.
 # @GitHub: https://github.com/yangmingustb/PTPSim
 ====================
 Dijkstra grid based planning
+
+s-rho graph
 """
 
 import matplotlib.pyplot as plt
@@ -83,7 +85,7 @@ def dijkstra_planning(start, longitudinal_step, lateral_step, lateral_number, ef
 	"""
 
 	:param start:
-	:param obstacle:
+	:param dyn_obs:
 	:param longitudinal_step:
 	:param lateral_step:
 	:param longitudinal_number:

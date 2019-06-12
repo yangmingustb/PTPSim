@@ -203,10 +203,10 @@ def inequality_cons(rho):
 
 	# # 障碍物2约束
 	# for i in range(n_s + 3):
-	# 	if ((s[i] - static_obs[1][0]) ** 2 < 9):
-	# 		c1_obs2 = (s[i] - static_obs[1, 0]) ** 2 + (rho[i] - static_obs[1, 1]) ** 2
-	# 		c2_obs2 = (s[i] + d_circle - static_obs[1, 0]) ** 2 + (rho[i] - static_obs[1, 1]) ** 2
-	# 		c3_obs2 = (s[i] + 2 * d_circle - static_obs[1, 0]) ** 2 + (rho[i] - static_obs[1, 1]) ** 2
+	# 	if ((s[i] - obs[1][0]) ** 2 < 9):
+	# 		c1_obs2 = (s[i] - obs[1, 0]) ** 2 + (rho[i] - obs[1, 1]) ** 2
+	# 		c2_obs2 = (s[i] + d_circle - obs[1, 0]) ** 2 + (rho[i] - obs[1, 1]) ** 2
+	# 		c3_obs2 = (s[i] + 2 * d_circle - obs[1, 0]) ** 2 + (rho[i] - obs[1, 1]) ** 2
 	#
 	# 		optimization.subject_to(c1_obs2 >= safe_distance ** 2)
 	# 		optimization.subject_to(c2_obs2 >= safe_distance ** 2)

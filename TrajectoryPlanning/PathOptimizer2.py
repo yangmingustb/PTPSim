@@ -64,19 +64,27 @@ import matplotlib.pyplot as plt
 import model.simModel as car
 import Curves.cubic_spline as cubicSpline
 import FrenetMath.FrenetToCartesian as ftc
+import FrenetMath.kappaCalculate as calKappa
+import FrenetMath.calHeading as heading
+import TrajectoryPlanning.SpeedProfileOptimizer3 as speed
+import TrajectoryPlanning.pathPlaner2 as pathPlanner
 
 
 show_animation = True
 show_obstacle = True
-show_vehicle_animation = True
-rho_max = 3.0  # 行驶通道的左右边界
-rho_min = -3.0
+show_vehicle_animation = False
+showRefinedPath = True
+showRoughPath = True
+showVehicleStart = True
+showRoughKappa = True
+showRefinedKappa = True
+
 s_max = 100.0
 reso_s = 1.0
 n_s = int(s_max / reso_s)
 r_circle = 1.0  # 车体包络圆
 d_circle = 2.0  # 圆心间距
-obs_inflation = 1.0
+obs_inflation = 1.5
 safe_distance = obs_inflation + r_circle
 kappa_max = 0.187
 w_d = 1.0
@@ -85,12 +93,14 @@ w_ddd = 50.0
 w_ref = 0.1
 
 lane_width = 3.75
-refLineRho = lane_width*0.5
+refLineRho = lane_width * 0.5
 rho_r = [refLineRho for i in range(n_s + 3)]
+rho_max = lane_width * 2  # 行驶通道的左右边界
+rho_min = 0.0 + r_circle
 # 初值
 rho_init_guess = refLineRho * np.ones((1, n_s + 3))
 
-obstacleHeading=0.0 * math.pi / 180.0
+obstacleHeading = 0.0 * math.pi / 180.0
 
 # 起点状态
 s0 = 0.0
@@ -103,10 +113,9 @@ s = [i for i in np.arange(reso_s, (s_max + 4 * reso_s), reso_s)]
 # print("len(s)", len(s))
 
 # 障碍物表示
-static_obs = [[20, refLineRho-1], [40, refLineRho +1], [70, refLineRho-1]]  # 障碍物的frenet坐标,
-
-rho_min_list = [rho_min for i in range(n_s+3)]
-rho_max_list = [rho_max for i in range(n_s+3)]
+static_obs = [[20, refLineRho - 1], [40, refLineRho + 2], [70, refLineRho + 2]]  # 障碍物的frenet坐标,
+rho_min_list = [rho_min for i in range(n_s + 3)]
+rho_max_list = [rho_max for i in range(n_s + 3)]
 
 
 def boundValue(efficients):
@@ -127,7 +136,7 @@ def boundValue(efficients):
 	m = kappa0 * ((x1 - x0) ** 2 + (y1 - y0) ** 2) ** (3 / 2)
 	n = (x1 - x0) * (yr2 - 2 * y1 + y0) + (y1 - y0) * (xr2 - 2 * x1 + x0)
 	q = (x1 - x0) * math.sin(thetar2 + math.pi / 2.0) - (y1 - y0) * math.cos(thetar2 + math.pi / 2.0)
-	rho_2 = (m - n) / q    # 本来求出的是到参考线的距离
+	rho_2 = (m - n) / q  # 本来求出的是到参考线的距离
 	# 加上参考线到最右侧车道线的距离，是真正的偏移量，
 	# 这个问题debug了很久，一定要将方程设在参考线处，可以免去很多麻烦
 	rho_2 = rho_2 + refLineRho
@@ -180,7 +189,6 @@ def inequality_cons(rho, s, optimization, efficients):
 	for i in range(n_s + 3):
 		# the first obs
 		if ((s[i] - static_obs[0][0]) ** 2 < 9):
-
 			c1_obs = (s[i] - static_obs[0][0]) ** 2 + (rho[i] - static_obs[0][1]) ** 2
 			c2_obs = (s[i] + d_circle - static_obs[0][0]) ** 2 + (rho[i] - static_obs[0][1]) ** 2
 			c3_obs = (s[i] + 2 * d_circle - static_obs[0][0]) ** 2 + (rho[i] - static_obs[0][1]) ** 2
@@ -209,7 +217,6 @@ def inequality_cons(rho, s, optimization, efficients):
 
 
 def allConstraints(rho, s, optimization, efficients):
-
 	# 曲率和避障约束
 	inequality_cons(rho, s, optimization, efficients)
 	rho1, rho2 = boundValue(efficients)
@@ -242,51 +249,104 @@ def ipoptSolver(efficients):
 	solution = optimization.solve()
 	rho_vector = solution.value(rho)
 	# print("rho_vector:", rho_vector)
-	return  rho_vector
+	return rho_vector
+
+
+def ToMPC():
+	efficients = cubicSpline.saveEfficients()
+	rho_vector = ipoptSolver(efficients)
+	theta_rho = []
+	for i in range(len(s) - 1):
+		state0 = [s[i], rho_vector[i]]
+		state1 = [s[i + 1], rho_vector[i + 1]]
+		tmp_theta = heading.calHeadingFrenet(state0, state1)
+		theta_rho.append(tmp_theta)
+	theta_rho.append(theta_rho[-1])
+
+	x = []
+	y = []
+	theta = []
+	# print(s)
+	for j in range(len(s)):
+		tmpX, tmpY, tmpTheta = ftc.frenetToXY(s[j], rho_vector[j], theta_rho[j], efficients)
+		x.append(tmpX)
+		y.append(tmpY)
+		theta.append(tmpTheta)
+	kappa_list = calKappa.path_kappa(rho_vector, s, efficients)
+	return x[0:n_s + 1], y[0:n_s + 1], theta[0:n_s + 1], kappa_list
 
 
 def plotGraph():
-
 	# plot graph
-	plt.figure(figsize=(3.5, 3.5 * 0.618))  # 单位英寸， 3.5
+	plt.figure(figsize=(3.5, 3.5))  # 单位英寸， 3.5
 	font1 = {'family': 'Times New Roman', 'weight': 'normal', 'size': 10}
 	plt.rcParams['font.sans-serif'] = ['Times New Roman']  # 如果要显示中文字体，则在此处设为：SimHei
 
-
-	p1 = [0.2, 0.2, 0.7, 0.6]
+	p1 = [0.15, 0.15, 0.75, 0.65]
 	plt.axes(p1)
 
 	efficients = cubicSpline.saveEfficients()
 	rho_vector = ipoptSolver(efficients)
+	theta_rho = []
+	for i in range(len(s) - 1):
+		state0 = [s[i], rho_vector[i]]
+		state1 = [s[i + 1], rho_vector[i + 1]]
+		tmp_theta = heading.calHeadingFrenet(state0, state1)
+		theta_rho.append(tmp_theta)
+	theta_rho.append(theta_rho[-1])
 
 	x = []
 	y = []
+	theta = []
 	# print(s)
 	for j in range(len(s)):
-		tmpX, tmpY, tmpTheta = ftc.frenetToXY(s[j], rho_vector[j], 0, efficients)
+		tmpX, tmpY, tmpTheta = ftc.frenetToXY(s[j], rho_vector[j], theta_rho[j], efficients)
 		x.append(tmpX)
 		y.append(tmpY)
-	plt.plot(x, y, c='r', linewidth=1, alpha=1)
+		theta.append(tmpTheta)
+
+	tmp_s = []
+	tmp_rho = []
+	tmp_thetaRho = []
+	if showRoughPath:
+		tmp_s, tmp_rho, tmp_thetaRho = pathPlanner.ToPathOptimizer2(efficients)
+	if showRefinedPath:
+		plt.plot(x, y, c='cyan', linewidth=0.6, alpha=1, label='Refined path')
 
 	# plot obstacles
 	if show_obstacle:
 		for i in range(len(static_obs)):
-			x, y, theta = ftc.frenetToXY(static_obs[i][0], static_obs[i][1], obstacleHeading, efficients)
-			car.simVehicle([x, y], theta, 'r', 0.8)
+			tmpx, tmpy, tmptheta = ftc.frenetToXY(static_obs[i][0], static_obs[i][1], obstacleHeading, efficients)
+			car.simVehicle([tmpx, tmpy], tmptheta, 'r', 1)
+
 	if show_vehicle_animation:
-		x0, y0, theta0 = ftc.frenetToXY(start_SRho[0], start_SRho[1], start_SRho[2], efficients)
-		car.simVehicle([x0, y0], theta0, 'blue', 1)
+		for i in range(0, n_s, 1):
+			time_stamp = i / n_s + 0.3
+			if time_stamp > 1.0:
+				time_stamp = 1.0
+			if i <= 5:
+				car.simVehicle([x[i], y[i]], theta[i], 'b', time_stamp)
+			if 5 <= i <= 10:
+				if (i % 2) == 0:
+					car.simVehicle([x[i], y[i]], theta[i], 'b', time_stamp)
+			if 10 <= i <= n_s:
+				if (i % 3) == 0:
+					car.simVehicle([x[i], y[i]], theta[i], 'b', time_stamp)
+			plt.pause(0.001)
 
 	plt.grid(linestyle="--", linewidth=0.5, alpha=1)
-	plt.title('x-y Graph', font1)
+	# plt.title('x-y Graph', font1)
 	plt.xlabel('x (m)', font1)
 	plt.ylabel('y (m)', font1)
 	plt.xticks(fontproperties='Times New Roman', fontsize=10)
 	plt.yticks(fontproperties='Times New Roman', fontsize=10)
-	plt.xlim(-10, 80)
-	plt.ylim(-10, 80)
+	# plt.legend(loc=0)  # 图例位置自动
+
+	plt.xlim(-10, 30)
+	plt.ylim(-5, 80)
 
 	plt.savefig('../SimGraph/pathOptimization2Path060415.svg')
+	plt.savefig('../SimGraph/pathOptimization2Path060415.tiff', dpi=600)
 
 	plt.figure(figsize=(3.5, 3.5 * 0.618))  # 单位英寸， 3.5
 	font1 = {'family': 'Times New Roman', 'weight': 'normal', 'size': 10}
@@ -294,43 +354,45 @@ def plotGraph():
 
 	p2 = [0.2, 0.2, 0.7, 0.6]
 	plt.axes(p2)
-	kappa_list = trajectory_kappa(rho_vector, s, efficients)
-	plt.plot(s[0:n_s + 1], kappa_list, c= 'b', linestyle="-", linewidth=0.5, alpha=1)
 
-	y = [max(kappa_list) for i in range(n_s + 1)]
-	y2 = [min(kappa_list) for i in range(n_s + 1)]
-	plt.plot(s[0:n_s + 1], y, c= 'r', linestyle="--", linewidth=0.5, alpha=1)
-	plt.plot(s[0:n_s + 1], y2, c= 'r', linestyle="--", linewidth=0.5, alpha=1)
-	plt.title('Curvature Profile', font1)
-	plt.grid(linestyle="--", linewidth=0.5, alpha=1)
-	plt.xlabel('s (m)', font1)
-	plt.ylabel('kappa (1/m)', font1)
-	plt.xlim(-1, 110)
-	plt.ylim(-0.2, 0.2)
+	if showRoughKappa:
+		tmp_rough_s = []
+		tmp_rough_rho = []
+		for i in range(len(tmp_s)):
+			if 10 * i <= (len(tmp_s) - 1):
+				tmp_rough_s.append(tmp_s[10 * i])
+				tmp_rough_rho.append(tmp_rho[10 * i])
+			else:
+				break
 
-	plt.savefig('../SimGraph/pathOptimization2Kappa060415.svg')
-	plt.show()
+		rough_kappa = calKappa.path_kappa(tmp_rough_rho, tmp_rough_s, efficients)
+		print("--------------")
+		print(len(rough_kappa))
+		plt.plot(s[0:n_s - 2], rough_kappa, c='magenta', linestyle="-", linewidth=0.5, alpha=1,label='Rough Path Curvature Profile')
 
+		if showRefinedKappa:
 
-def trajectory_kappa(rho, s, efficients):
-	tmp_kappa = []
+			kappa_refined = calKappa.path_kappa(rho_vector, s, efficients)
+			plt.plot(s[0:n_s + 1], kappa_refined, c='cyan', linestyle="-", linewidth=0.5, alpha=1,
+			         label='Refined Path Curvature Profile')
 
-	for i in range(len(rho)-2):
-		x0, y0, theta0 = ftc.frenetToXY(s[i], rho[i], 0, efficients)
-		x1, y1, theta1 = ftc.frenetToXY(s[i + 1], rho[i + 1], 0, efficients)
-		x2, y2, theta2 = ftc.frenetToXY(s[i + 2], rho[i + 2], 0, efficients)
+			y = [max(kappa_refined) for i in range(n_s + 1)]
+			y2 = [min(kappa_refined) for i in range(n_s + 1)]
+			plt.plot(s[0:n_s + 1], y, c='k', linestyle="--", linewidth=0.5, alpha=1)
+			plt.plot(s[0:n_s + 1], y2, c='k', linestyle="--", linewidth=0.5, alpha=1)
+			plt.title('Curvature Profile', font1)
+			plt.grid(linestyle="--", linewidth=0.5, alpha=1)
+			plt.xlabel('s (m)', font1)
+			plt.ylabel('kappa (1/m)', font1)
+			plt.xlim(-1, 110)
+			plt.ylim(-0.1, 0.2)
+			plt.legend(loc=0)  # 图例位置自动
 
-		k1 = (x1 - x0)*(y2-2*y1+y0)
-		k2 = (y1-y0)*(x2-2*x1+x0)
-		k3 = ((x1-x0)**2+(y1-y0)**2)**(3.0/2.0)
-
-		if (k3 == 0.0):
-			tmp_kappa.append(0)
-		else:
-			tmp_kappa.append((k1 - k2) / k3)
-	return tmp_kappa
+		plt.savefig('../SimGraph/pathOptimization2Kappa060415.svg')
+		plt.savefig('../SimGraph/pathOptimization2Kappa060415.tiff', dpi=600)
+		plt.show()
+	return None
 
 
 if __name__ == '__main__':
 	plotGraph()
-

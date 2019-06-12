@@ -34,7 +34,6 @@ import math
 import matplotlib.pyplot as plt
 import model.simModel as car
 import TrajectoryPlanning.PathPlanner as pp
-import model.simModel as car
 
 
 show_animation = 1
@@ -54,7 +53,7 @@ w_ref = 0.1
 lane_width = 3.75
 # refLineRho = lane_width*0.5
 # 障碍物表示
-# static_obs = [[20, refLineRho-2], [40, refLineRho - 1], [70, refLineRho-2]]  # 障碍物的frenet坐标,
+# obs = [[20, refLineRho-2], [40, refLineRho - 1], [70, refLineRho-2]]  # 障碍物的frenet坐标,
 rho_max = lane_width  # 行驶通道的左右边界
 rho_min = -lane_width
 refLineRho = -lane_width*0.5

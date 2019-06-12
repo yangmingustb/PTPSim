@@ -72,7 +72,7 @@ reso_s = 1.0
 n_s = int(s_max / reso_s)
 r_circle = 1.0  # 车体包络圆
 d_circle = 2.0  # 圆心间距
-obs_inflation = 1.0
+obs_inflation = 1.5
 safe_distance = obs_inflation + r_circle
 kappa_max = 0.187
 w_d = 1.0
@@ -86,10 +86,11 @@ rho_init_guess = np.zeros((1, n_s + 3))
 lane_width = 3.75
 refLineRho = lane_width*0.5
 # 障碍物表示
-static_obs = [[20, refLineRho-2], [40, refLineRho - 1], [70, refLineRho-2]]  # 障碍物的frenet坐标,
+static_obs = [[20, refLineRho-1], [40, refLineRho + 2], [70, refLineRho + 2]]  # 障碍物的frenet坐标,
+# obs = [[20, refLineRho-2], [40, refLineRho - 1], [70, refLineRho-2]]  # 障碍物的frenet坐标,
 
 # refLineRho = -2.0
-# static_obs = [[20, -2], [40, 2], [70, -2]]
+# obs = [[20, -2], [40, 2], [70, -2]]
 
 # 起点状态
 x0 = 0

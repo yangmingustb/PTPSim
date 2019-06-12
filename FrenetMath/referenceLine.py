@@ -34,8 +34,7 @@ import numpy as np
 import matplotlib.pyplot as plt
 
 
-showLane=False
-
+showLane=True
 LaneWidth = 3.75  # [m]
 left = 1
 
@@ -130,35 +129,43 @@ def arcLengthCurve(x_init, x_goal, s0, sf, rightLeft):
 	# 第二车道线
 	fun_x2 = []
 	fun_y2 = []
+	# 第三车道线
+	fun_x3 = []
+	fun_y3 = []
+	# refLine
+	refx = []
+	refy = []
+	# refLine of the second lane
+	refx2 = []
+	refy2 = []
 	for i in range(len(fun_x)):
 		x2 = fun_x[i] +rightLeft* LaneWidth * math.cos(theta[i] + math.pi / 2.0)
 		y2 = fun_y[i] +rightLeft* LaneWidth * math.sin(theta[i] + math.pi / 2.0)
 		fun_x2.append(x2)
 		fun_y2.append(y2)
 
-	# 第三车道线
-	fun_x3 = []
-	fun_y3 = []
-	for i in range(len(fun_x)):
 		x3 = fun_x[i] + rightLeft*2 * LaneWidth * math.cos(theta[i] + math.pi / 2.0)
 		y3 = fun_y[i] + rightLeft*2 * LaneWidth * math.sin(theta[i] + math.pi / 2.0)
 		fun_x3.append(x3)
 		fun_y3.append(y3)
 
-	# refLine
-	refx = []
-	refy = []
-	for i in range(len(fun_x)):
 		x = fun_x[i] + rightLeft * 0.5 * LaneWidth * math.cos(theta[i] + math.pi / 2.0)
 		y = fun_y[i] + rightLeft * 0.5 * LaneWidth * math.sin(theta[i] + math.pi / 2.0)
 		refx.append(x)
 		refy.append(y)
+
+		x = fun_x[i] + rightLeft * 1.5 * LaneWidth * math.cos(theta[i] + math.pi / 2.0)
+		y = fun_y[i] + rightLeft * 1.5 * LaneWidth * math.sin(theta[i] + math.pi / 2.0)
+		refx2.append(x)
+		refy2.append(y)
+
 	# print('refPosition:',[refx[0], refy[0]])
 	if showLane:
 		plt.plot(fun_x, fun_y, c='k', lw=0.6, alpha=1)
 		plt.plot(fun_x2, fun_y2, c='k', lw=0.4, alpha=1, ls='--')
 		plt.plot(fun_x3, fun_y3, c='k', lw=0.6, alpha=1, ls='-')
-		plt.plot(refx, refy, c='green', lw=0.3, alpha=0.8, ls='--')
+		plt.plot(refx, refy, c='green', lw=0.3, alpha=1, ls='--')
+		plt.plot(refx2, refy2, c='green', lw=0.3, alpha=1, ls='--')
 
 	return b_vector, c_vector
 

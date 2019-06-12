@@ -35,58 +35,53 @@ import matplotlib.pyplot as plt
 import math
 from scipy.integrate import quad
 
-
 width = 1.8
 length = 4.0
 R = math.sqrt((width / 2) ** 2 + (length / 2) ** 2)
 
 
 def simVehicle(center_point, heading, color='b', timestamp=1.0):
-    """
-    使用矩形模拟车辆,前后左右四个点
-    3 1
-    4 2
-    :param center_point: 矩形中心
-    :param heading: 航向角
-    :return:
-    """
+	"""
+	使用矩形模拟车辆,前后左右四个点
+	3 1
+	4 2
+	:param center_point: 矩形中心
+	:param heading: 航向角
+	:return:
+	"""
 
-    theta1 = math.atan2(width,length)
-    theta2 = -math.atan2(width,length)
-    theta3 = math.pi + theta2
-    theta4 = -math.pi + theta1
+	theta1 = math.atan2(width, length)
+	theta2 = -math.atan2(width, length)
+	theta3 = math.pi + theta2
+	theta4 = -math.pi + theta1
 
-    #   center_position
-    a, b = center_point[0], center_point[1]
+	#   center_position
+	a, b = center_point[0], center_point[1]
 
-    # ==========================================
-    #   参数方程
+	# ==========================================
+	#   参数方程
 
-    x1 = a + R * np.cos(heading + theta1)
-    y1 = b + R * np.sin(heading + theta1)
-    x2 = a + R * np.cos(heading + theta2)
-    y2 = b + R * np.sin(heading + theta2)
-    x3 = a + R * np.cos(heading + theta3)
-    y3 = b + R * np.sin(heading + theta3)
-    x4 = a + R * np.cos(heading + theta4)
-    y4 = b + R * np.sin(heading + theta4)
-    x = [x3, x4, x2, x1]
-    y = [y3, y4, y2, y1]
+	x1 = a + R * np.cos(heading + theta1)
+	y1 = b + R * np.sin(heading + theta1)
+	x2 = a + R * np.cos(heading + theta2)
+	y2 = b + R * np.sin(heading + theta2)
+	x3 = a + R * np.cos(heading + theta3)
+	y3 = b + R * np.sin(heading + theta3)
+	x4 = a + R * np.cos(heading + theta4)
+	y4 = b + R * np.sin(heading + theta4)
+	x = [x3, x4, x2, x1]
+	y = [y3, y4, y2, y1]
 
-    plt.fill(x, y, facecolor=color, alpha=timestamp)
+	plt.fill(x, y, facecolor=color, alpha=timestamp)
 
-    plt.plot([x1, x2], [y1, y2], color='black', linewidth=0.2, linestyle='-',alpha=timestamp)
-    plt.plot([x2, x4], [y2, y4], color='black', linewidth=0.2, linestyle='-', alpha=timestamp)
-    plt.plot([x1, x3], [y1, y3], color='black', linewidth=0.2, linestyle='-',alpha=timestamp)
-    plt.plot([x3, x4], [y3, y4], color='black', linewidth=0.2, linestyle='-',alpha=timestamp)
-    plt.axis("equal")
+	plt.plot([x1, x2], [y1, y2], color='black', linewidth=0.2, linestyle='-', alpha=timestamp)
+	plt.plot([x2, x4], [y2, y4], color='black', linewidth=0.2, linestyle='-', alpha=timestamp)
+	plt.plot([x1, x3], [y1, y3], color='black', linewidth=0.2, linestyle='-', alpha=timestamp)
+	plt.plot([x3, x4], [y3, y4], color='black', linewidth=0.2, linestyle='-', alpha=timestamp)
+	plt.axis('equal')
 
 
 if __name__ == "__main__":
-    simVehicle([0, 0], math.pi / 4, 'b', 0.8)
-    plt.show()
-
-
-
-
-
+	simVehicle([0, 0], math.pi / 4, 'b', 0.8)
+	plt.axis("equal")
+	plt.show()

@@ -21,8 +21,6 @@ state_goal = [20.0, -40.0, -40.0 * math.pi / 180.0]
 
 def Polynomial(x_init, x_goal):
 
-	#  在这里，一定要写交换函数，
-
 	s0 = x_init[0]
 	rho0 = x_init[1]
 	theta0 = x_init[2]

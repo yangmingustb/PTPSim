@@ -81,7 +81,7 @@ def dijkstra_planning(start, longitudinal_step, lateral_step, lateral_number, ef
 	"""
 
 	:param start:
-	:param obstacle:
+	:param dyn_obs:
 	:param longitudinal_step:
 	:param lateral_step:
 	:param longitudinal_number:
@@ -272,5 +272,5 @@ if __name__ == '__main__':
 	# plt.xlim(-1, 110)
 	# plt.ylim(-4, 4)
 	# plt.axis("equal")
-	plt.savefig('/home/ming/桌面/PTPSim/SimGraph/pathPlannerXY01.svg')
+	plt.savefig('../SimGraph/pathPlannerXY01.svg')
 	plt.show()

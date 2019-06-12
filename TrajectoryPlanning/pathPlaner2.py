@@ -25,6 +25,7 @@ SOFTWARE.
 @Author: ming.ustb@outlook.com
 @Date  : 19-5-30
 @GitHub: https://github.com/yangmingustb/PTPSim
+x-y graph
 """
 
 
@@ -35,14 +36,16 @@ import Curves.Cubic as cubic
 import model.simModel as car
 import Scenarios.multiLane as mlane
 import Curves.cubic_spline as cubicSpline
-import FrenetMath.FrenetToCartesian as sRhoToXY
+import FrenetMath.FrenetToCartesian as ftc
+import TrajectoryPlanning.pathLatticeXY2 as pathlattice
 
 
-show_vehicle_animation = True
+show_vehicle_animation = False
 show_sample_point = False
 show_lane = True
 show_obstacle = True
 show_rough_path = True
+showPathLattice = True
 
 s_max = 100.0
 longi_num = 5
@@ -50,12 +53,14 @@ lateral_num = 9  # 横向采样个数
 longi_step = 20.0
 latera_step = 0.5
 lane_width = 3.75
+numberUnderRefLine = lateral_num//2    # sampling number under reference line
 s0 = 0.0
+s_end=s0+s_max
 refLineRho = lane_width*0.5
 start_SRho = [s0, refLineRho, 0.0 * math.pi / 180.0]
 # start_XY = [-5.285, 1.924, 70.0 * math.pi / 180.0]
 
-obstacle = [[20, refLineRho-2], [40, refLineRho+2], [70, refLineRho-2]]
+obstacle = [[20, refLineRho - 1], [40, refLineRho + 2], [70, refLineRho + 2]]  # 障碍物的frenet坐标,
 obstacleHeading=0.0 * math.pi / 180.0
 
 last_column_id = [lateral_num * longi_num, lateral_num * (longi_num-1) + 1]  # 最后一列的编号
@@ -84,7 +89,7 @@ def dijkstra_planning(start, longitudinal_step, lateral_step, lateral_number, ef
 	"""
 
 	:param start:
-	:param obstacle:
+	:param dyn_obs:
 	:param longitudinal_step:
 	:param lateral_step:
 	:param longitudinal_number:
@@ -123,7 +128,7 @@ def dijkstra_planning(start, longitudinal_step, lateral_step, lateral_number, ef
 			node.cost = node.cost + cost
 			n_id = calc_index(node, nstart, longitudinal_step, lateral_step, lateral_number)
 
-			if node.x > s_max:
+			if node.x > s_end:
 				break
 
 			if n_id in closed_set:
@@ -149,8 +154,7 @@ def calc_index(node, nstart, longitudinal_step, lateral_step, latera_num):
 	:param latera_num:横向采样点个数
 	:return:
 	"""
-	id = (node.y - (refLineRho-lane_width/2.0)) / lateral_step + ((node.x - nstart.x) / longitudinal_step - 1) * latera_num + 1
-
+	id = (node.y - (refLineRho-numberUnderRefLine*lateral_step)) / lateral_step + ((node.x - nstart.x) / longitudinal_step - 1) * latera_num + 1
 	return id
 
 
@@ -163,7 +167,7 @@ def get_children_node(longitudinal_step, lateral_step):
 	"""
 	motion = []
 	for i in range(lateral_num):
-		tmp_motion = [longitudinal_step, (i - lane_width) * lateral_step + refLineRho]
+		tmp_motion = [longitudinal_step, (i - numberUnderRefLine) * lateral_step + refLineRho]
 		motion.append(tmp_motion)
 
 	return motion
@@ -201,10 +205,11 @@ def calc_final_path(ngoal, closedset):
 	return rx, ry
 
 
-if __name__ == '__main__':
+def plotGraph():
 	print(__file__ + " start!!")
-	plt.figure(figsize=(3.5, 3.5 * 0.9))  # 单位英寸， 3.5
-	plt.axes([0.15, 0.15, 0.75, 0.75])
+	plt.figure(figsize=(3.5, 3.5))  # 单位英寸， 3.5
+	p1 = [0.15, 0.15, 0.75, 0.65]
+	plt.axes(p1)
 	plt.axis("equal")
 	plt.grid(linestyle="--", linewidth=0.5, alpha=1)
 
@@ -220,7 +225,7 @@ if __name__ == '__main__':
 
 	if show_obstacle:
 		for i in range(len(obstacle)):
-			x, y, theta = sRhoToXY.frenetToXY(obstacle[i][0], obstacle[i][1], obstacleHeading, efficients)
+			x, y, theta = ftc.frenetToXY(obstacle[i][0], obstacle[i][1], obstacleHeading, efficients)
 			car.simVehicle([x, y], theta, 'r', 0.8)
 
 	#	sampling_point = PathLattice.sampling(longitudinal_num, lateral_num, latera_step, longitudinal_step)
@@ -246,22 +251,23 @@ if __name__ == '__main__':
 		tmp_rho.extend(rho)
 		tmp_thetaRho.extend(thetaRho)
 
+	if showPathLattice:
+		pathlattice.ToPathPlanner2(efficients)
 	x = []
 	y = []
 	theta = []
 	if show_rough_path:
-
 		# print(s)
 		for j in range(len(tmp_s)):
-			tmpX, tmpY, tmpTheta = sRhoToXY.frenetToXY(tmp_s[j],tmp_rho[j], tmp_thetaRho[j], efficients)
+			tmpX, tmpY, tmpTheta = ftc.frenetToXY(tmp_s[j], tmp_rho[j], tmp_thetaRho[j], efficients)
 			x.append(tmpX)
 			y.append(tmpY)
 			theta.append(tmpTheta)
 		# plt.scatter(end_set[0, i][0], end_set[0, i][1], color='b', s=2, alpha=0.8)
-		plt.plot(x, y, 'r', linewidth=0.1, alpha=0.8)
+		plt.plot(x, y, 'magenta', linewidth=0.5, alpha=1)
 
 	if show_vehicle_animation:
-		x0, y0, theta0 = sRhoToXY.frenetToXY(start_SRho[0], start_SRho[1], start_SRho[2], efficients)
+		x0, y0, theta0 = ftc.frenetToXY(start_SRho[0], start_SRho[1], start_SRho[2], efficients)
 		car.simVehicle([x0, y0], theta0, 'g', 1)
 
 		time_stamp = 0
@@ -278,8 +284,46 @@ if __name__ == '__main__':
 	plt.ylabel('y (m)', font1)
 	plt.xticks(fontproperties='Times New Roman', fontsize=10)
 	plt.yticks(fontproperties='Times New Roman', fontsize=10)
-	plt.xlim(-1, 200)
-	plt.ylim(-4, 200)
+	plt.xlim(-10, 30)
+	plt.ylim(-5, 80)
 	# plt.savefig('/home/ming/桌面/PTPSim/SimGraph/pathPlannerXY_5_30_8_48.svg')
-	plt.savefig('/home/ming/桌面/PTPSim/SimGraph/pathPlanner2_5_30_8_48.tiff', dpi=600)
+	plt.savefig('/home/ming/桌面/PTPSim/SimGraph/pathPlanner2_061101.tiff', dpi=600)
 	plt.show()
+
+
+def ToPathOptimizer2(efficients):
+	closed_set = dijkstra_planning(start_SRho, longi_step, latera_step, lateral_num, efficients)
+	#   print('----------------------------------')
+	#   print('closed_set:', len(closed_set))
+
+	goal = determine_goal(closed_set)
+	rx, ry = calc_final_path(goal, closed_set)
+	#	print("rx, ry: %s" % rx, ry)
+
+	tmp_s = []
+	tmp_rho = []
+	tmp_thetaRho = []
+	for i in range(len(rx) - 1):
+		point_s = [rx[-(i + 1)], ry[-(i + 1)], 0.0 * math.pi / 180.0]
+		point_e = [rx[-(i + 2)], ry[-(i + 2)], 0.0 * math.pi / 180.0]
+		s, rho, thetaRho = cubic.Polynomial(point_s, point_e)
+		tmp_s.extend(s)
+		tmp_rho.extend(rho)
+		tmp_thetaRho.extend(thetaRho)
+	x = []
+	y = []
+	theta = []
+	if show_rough_path:
+		# print(s)
+		for j in range(len(tmp_s)):
+			tmpX, tmpY, tmpTheta = ftc.frenetToXY(tmp_s[j], tmp_rho[j], tmp_thetaRho[j], efficients)
+			x.append(tmpX)
+			y.append(tmpY)
+			theta.append(tmpTheta)
+		# plt.scatter(end_set[0, i][0], end_set[0, i][1], color='b', s=2, alpha=0.8)
+		plt.plot(x, y, 'magenta', linewidth=0.4, alpha=1)
+	return 	tmp_s, tmp_rho,	tmp_thetaRho
+
+
+if __name__ == '__main__':
+	plotGraph()

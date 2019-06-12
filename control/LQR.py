@@ -54,7 +54,7 @@ max_steer = math.radians(45.0)  # maximum steering angle[rad]
 target_speed = 40.0 / 3.6  # simulation parameter km/h -> m/s
 
 show_animation = True
-#  show_animation = False
+#  showAnimation = False
 
 
 class State:

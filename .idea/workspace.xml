@@ -2,8 +2,45 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b40da164-17d1-4821-81af-e1735b0636b3" name="Default" comment="">
+      <change afterPath="$PROJECT_DIR$/TrajectoryPlanning/SpeedProfileOptimizer3.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/TrajectoryPlanning/pathLatticeXY2.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/TrajectoryPlanning/pathLatticeXY4.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/TrajectoryPlanning/pathOptimizer3.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/TrajectoryPlanning/pathOptimizer4.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/TrajectoryPlanning/pathPlanner3.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/TrajectoryPlanning/pathPlanner4.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/TrajectoryPlanning/speedOptimizer2.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/TrajectoryPlanning/speedProfileOptimizer4.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/TrajectoryPlanning/test4.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Curves/Cubic.py" beforeDir="false" afterPath="$PROJECT_DIR$/Curves/Cubic.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/FrenetMath/calHeading.py" beforeDir="false" afterPath="$PROJECT_DIR$/FrenetMath/calHeading.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/FrenetMath/kappaCalculate.py" beforeDir="false" afterPath="$PROJECT_DIR$/FrenetMath/kappaCalculate.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/FrenetMath/referenceLine.py" beforeDir="false" afterPath="$PROJECT_DIR$/FrenetMath/referenceLine.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SimGraph/MPC_speed.tiff" beforeDir="false" afterPath="$PROJECT_DIR$/SimGraph/MPC_speed.tiff" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SimGraph/pathLattice01.svg" beforeDir="false" afterPath="$PROJECT_DIR$/SimGraph/pathLattice01.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SimGraph/pathLatticeXY5_30_15_26.tiff" beforeDir="false" afterPath="$PROJECT_DIR$/SimGraph/pathLatticeXY5_30_15_26.tiff" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SimGraph/pathOptimizationKappa060413.svg" beforeDir="false" afterPath="$PROJECT_DIR$/SimGraph/pathOptimizationKappa060413.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SimGraph/pathOptimizationPath060414.svg" beforeDir="false" afterPath="$PROJECT_DIR$/SimGraph/pathOptimizationPath060414.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SimGraph/pathPlanner06051432.tiff" beforeDir="false" afterPath="$PROJECT_DIR$/SimGraph/pathPlanner06051432.tiff" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SimGraph/pathPlanner2_5_30_8_48.tiff" beforeDir="false" afterPath="$PROJECT_DIR$/SimGraph/pathPlanner2_5_30_8_48.tiff" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SimGraph/pathPlannerXY01.svg" beforeDir="false" afterPath="$PROJECT_DIR$/SimGraph/pathPlannerXY01.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SimGraph/speedOptimizationNoObs.svg" beforeDir="false" afterPath="$PROJECT_DIR$/SimGraph/speedOptimizationNoObs.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SimGraph/speedOptimizationNoObs.tiff" beforeDir="false" afterPath="$PROJECT_DIR$/SimGraph/speedOptimizationNoObs.tiff" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TrajectoryPlanning/PathCost.py" beforeDir="false" afterPath="$PROJECT_DIR$/TrajectoryPlanning/PathCost.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TrajectoryPlanning/PathOptimizer.py" beforeDir="false" afterPath="$PROJECT_DIR$/TrajectoryPlanning/PathOptimizer.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TrajectoryPlanning/PathOptimizer2.py" beforeDir="false" afterPath="$PROJECT_DIR$/TrajectoryPlanning/PathOptimizer2.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TrajectoryPlanning/PathOptimizerTest1.py" beforeDir="false" afterPath="$PROJECT_DIR$/TrajectoryPlanning/PathOptimizerTest1.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TrajectoryPlanning/PathPlanner.py" beforeDir="false" afterPath="$PROJECT_DIR$/TrajectoryPlanning/PathPlanner.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TrajectoryPlanning/SpeedProfileOptimizer.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TrajectoryPlanning/pathLatticeXY.py" beforeDir="false" afterPath="$PROJECT_DIR$/TrajectoryPlanning/pathLatticeXY3.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TrajectoryPlanning/pathPlaner2.py" beforeDir="false" afterPath="$PROJECT_DIR$/TrajectoryPlanning/pathPlaner2.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TrajectoryPlanning/pathPlannerXY.py" beforeDir="false" afterPath="$PROJECT_DIR$/TrajectoryPlanning/pathPlannerXY.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TrajectoryPlanning/test2.py" beforeDir="false" afterPath="$PROJECT_DIR$/TrajectoryPlanning/test2.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/control/LQR.py" beforeDir="false" afterPath="$PROJECT_DIR$/control/LQR.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/control/MPC.py" beforeDir="false" afterPath="$PROJECT_DIR$/control/MPC.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/model/simModel.py" beforeDir="false" afterPath="$PROJECT_DIR$/model/simModel.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/历史版本1/ReadMe.md" beforeDir="false" afterPath="$PROJECT_DIR$/历史版本1/ReadMe.md" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -198,40 +235,40 @@
         <counts>
           <entry key="md" value="2" />
           <entry key="png" value="4" />
-          <entry key="py" value="276" />
+          <entry key="py" value="407" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
           <entry key="Image" value="4" />
           <entry key="Markdown" value="2" />
-          <entry key="Python" value="276" />
+          <entry key="Python" value="407" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="24" />
-          <entry key="project.open.time.0" value="1" />
+          <entry key="project.closed" value="26" />
+          <entry key="project.open.time.0" value="2" />
           <entry key="project.open.time.2" value="1" />
           <entry key="project.open.time.3" value="6" />
-          <entry key="project.open.time.4" value="13" />
+          <entry key="project.open.time.4" value="15" />
           <entry key="project.open.time.5" value="3" />
-          <entry key="project.opened" value="24" />
+          <entry key="project.opened" value="27" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="Python Console" value="82" />
-          <entry key="dummy" value="53" />
+          <entry key="dummy" value="64" />
           <entry key="md" value="20" />
-          <entry key="py" value="10461" />
+          <entry key="py" value="14728" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="Markdown" value="20" />
-          <entry key="PLAIN_TEXT" value="53" />
-          <entry key="Python" value="10543" />
+          <entry key="PLAIN_TEXT" value="64" />
+          <entry key="Python" value="14810" />
         </counts>
       </usages-collector>
     </session>
@@ -241,14 +278,56 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Curves/cubic_spline.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="4951">
+              <caret line="211" column="4" selection-start-line="211" selection-start-column="4" selection-end-line="211" selection-end-column="4" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/TrajectoryPlanning/pathLatticeXY4.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="148">
+              <caret line="137" selection-start-line="137" selection-end-line="137" />
+              <folding>
+                <element signature="e#2564#2582#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/TrajectoryPlanning/speedProfileOptimizer4.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="327">
+              <caret line="39" column="16" selection-start-line="39" selection-start-column="16" selection-end-line="39" selection-end-column="16" />
+              <folding>
+                <marker date="1560340212868" expanded="true" signature="12280:13139" ph="..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/README.md">
-          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-            <state split_layout="FIRST">
-              <first_editor relative-caret-position="486">
-                <caret line="18" lean-forward="true" selection-start-line="18" selection-end-line="18" />
-              </first_editor>
-              <second_editor />
+        <entry file="file://$PROJECT_DIR$/control/MPC.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="203">
+              <caret line="447" column="35" selection-start-line="447" selection-start-column="35" selection-end-line="447" selection-end-column="35" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/TrajectoryPlanning/pathOptimizer4.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="297">
+              <caret line="68" column="10" selection-start-line="68" selection-start-column="10" selection-end-line="68" selection-end-column="10" />
+              <folding>
+                <element signature="e#2451#2471#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -274,25 +353,11 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/math/FrenetToCartesian.py" />
-        <option value="$PROJECT_DIR$/math/kappaCalculate.py" />
-        <option value="$PROJECT_DIR$/math/ReferenceLine.py" />
-        <option value="$PROJECT_DIR$/历史版本1/Map/CurveLane.py" />
-        <option value="$PROJECT_DIR$/FrenetMath/ReferenceLine.py" />
-        <option value="$PROJECT_DIR$/FrenetMath/CartesianToFrenet.py" />
-        <option value="$PROJECT_DIR$/TrajectoryPlanning/main.py" />
-        <option value="$PROJECT_DIR$/TrajectoryPlanning/emPlanner.py" />
-        <option value="$PROJECT_DIR$/TrajectoryPlanning/SpeedProfileCost.py" />
-        <option value="$PROJECT_DIR$/TrajectoryPlanning/SpeedProfileGenerator.py" />
-        <option value="$PROJECT_DIR$/Scenarios/test1.py" />
         <option value="$PROJECT_DIR$/TrajectoryPlanning/PathLattice.py" />
         <option value="$PROJECT_DIR$/TrajectoryPlanning/SpeedProfileLattice.py" />
         <option value="$PROJECT_DIR$/TrajectoryPlanning/SpeedProfilePlanner.py" />
         <option value="$PROJECT_DIR$/TrajectoryPlanning/VehicleModel.py" />
-        <option value="$PROJECT_DIR$/TrajectoryPlanning/PathCost.py" />
         <option value="$PROJECT_DIR$/Scenarios/multiLane.py" />
-        <option value="$PROJECT_DIR$/TrajectoryPlanning/pathPlannerXY.py" />
-        <option value="$PROJECT_DIR$/FrenetMath/kappaCalculate.py" />
         <option value="$PROJECT_DIR$/Curves/bezier.py" />
         <option value="$PROJECT_DIR$/Curves/Quintic.py" />
         <option value="$PROJECT_DIR$/Scenarios/CurveLane.py" />
@@ -304,35 +369,49 @@
         <option value="$PROJECT_DIR$/Curves/cubic_spline_planner.py" />
         <option value="$PROJECT_DIR$/control/LQR2.py" />
         <option value="$PROJECT_DIR$/control/LQR.py" />
-        <option value="$PROJECT_DIR$/FrenetMath/calHeading.py" />
         <option value="$PROJECT_DIR$/Scenarios/circleRoad.py" />
         <option value="$PROJECT_DIR$/FrenetMath/efficients.py" />
-        <option value="$PROJECT_DIR$/Curves/Cubic.py" />
-        <option value="$PROJECT_DIR$/TrajectoryPlanning/pathLatticeXY.py" />
         <option value="$PROJECT_DIR$/TrajectoryPlanning/test3.py" />
         <option value="$PROJECT_DIR$/TrajectoryPlanning/test2.py" />
-        <option value="$PROJECT_DIR$/TrajectoryPlanning/SpeedProfileOptimizer.py" />
         <option value="$PROJECT_DIR$/TrajectoryPlanning/test1.py" />
-        <option value="$PROJECT_DIR$/model/simModel.py" />
         <option value="$PROJECT_DIR$/FrenetMath/FrenetToCartesian.py" />
-        <option value="$PROJECT_DIR$/TrajectoryPlanning/pathPlaner2.py" />
         <option value="$PROJECT_DIR$/Scenarios/TwoLane.py" />
-        <option value="$PROJECT_DIR$/TrajectoryPlanning/PathOptimizer.py" />
-        <option value="$PROJECT_DIR$/TrajectoryPlanning/PathPlanner.py" />
         <option value="$PROJECT_DIR$/Curves/cubic_spline.py" />
-        <option value="$PROJECT_DIR$/control/MPC.py" />
-        <option value="$PROJECT_DIR$/FrenetMath/referenceLine.py" />
-        <option value="$PROJECT_DIR$/TrajectoryPlanning/PathOptimizer2.py" />
-        <option value="$PROJECT_DIR$/TrajectoryPlanning/PathOptimizerTest1.py" />
         <option value="$PROJECT_DIR$/README.md" />
+        <option value="$PROJECT_DIR$/TrajectoryPlanning/PathOptimizer.py" />
+        <option value="$PROJECT_DIR$/FrenetMath/calHeading.py" />
+        <option value="$PROJECT_DIR$/TrajectoryPlanning/SpeedProfileOptimizer.py" />
+        <option value="$PROJECT_DIR$/Curves/Cubic.py" />
+        <option value="$PROJECT_DIR$/TrajectoryPlanning/PathOptimizerTest1.py" />
+        <option value="$PROJECT_DIR$/TrajectoryPlanning/PathPlanner.py" />
+        <option value="$PROJECT_DIR$/TrajectoryPlanning/PathCost.py" />
+        <option value="$PROJECT_DIR$/model/simModel.py" />
+        <option value="$PROJECT_DIR$/FrenetMath/referenceLine.py" />
+        <option value="$PROJECT_DIR$/TrajectoryPlanning/pathLatticeXY.py" />
+        <option value="$PROJECT_DIR$/TrajectoryPlanning/pathLatticeXY2.py" />
+        <option value="$PROJECT_DIR$/TrajectoryPlanning/pathPlaner2.py" />
+        <option value="$PROJECT_DIR$/TrajectoryPlanning/PathOptimizer2.py" />
+        <option value="$PROJECT_DIR$/TrajectoryPlanning/speedOptimizer2.py" />
+        <option value="$PROJECT_DIR$/TrajectoryPlanning/SpeedProfileOptimizer3.py" />
+        <option value="$PROJECT_DIR$/TrajectoryPlanning/pathOptimizer3.py" />
+        <option value="$PROJECT_DIR$/TrajectoryPlanning/pathLatticeXY3.py" />
+        <option value="$PROJECT_DIR$/TrajectoryPlanning/pathPlanner3.py" />
+        <option value="$PROJECT_DIR$/TrajectoryPlanning/pathPlannerXY.py" />
+        <option value="$PROJECT_DIR$/TrajectoryPlanning/pathLatticeXY4.py" />
+        <option value="$PROJECT_DIR$/TrajectoryPlanning/pathPlanner4.py" />
+        <option value="$PROJECT_DIR$/FrenetMath/kappaCalculate.py" />
+        <option value="$PROJECT_DIR$/TrajectoryPlanning/pathOptimizer4.py" />
+        <option value="$PROJECT_DIR$/TrajectoryPlanning/test4.py" />
+        <option value="$PROJECT_DIR$/TrajectoryPlanning/speedProfileOptimizer4.py" />
+        <option value="$PROJECT_DIR$/control/MPC.py" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="654" />
-    <option name="y" value="152" />
-    <option name="width" value="1613" />
-    <option name="height" value="1046" />
+    <option name="x" value="67" />
+    <option name="y" value="12" />
+    <option name="width" value="1611" />
+    <option name="height" value="1038" />
   </component>
   <component name="ProjectInspectionProfilesVisibleTreeState">
     <entry key="Project Default">
@@ -359,6 +438,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -369,18 +449,27 @@
             <path>
               <item name="PTPSim" type="b2602c69:ProjectViewProjectNode" />
               <item name="PTPSim" type="462c0819:PsiDirectoryNode" />
+              <item name="control" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="PTPSim" type="b2602c69:ProjectViewProjectNode" />
+              <item name="PTPSim" type="462c0819:PsiDirectoryNode" />
+              <item name="model" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="PTPSim" type="b2602c69:ProjectViewProjectNode" />
+              <item name="PTPSim" type="462c0819:PsiDirectoryNode" />
               <item name="TrajectoryPlanning" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../PyPlanningSim" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
   <component name="PyConsoleOptionsProvider">
@@ -414,7 +503,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.PathOptimizerTest1">
+  <component name="RunManager" selected="Python.MPC">
     <configuration name="MPC" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="PTPSim" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -428,69 +517,6 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/control/MPC.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
-    <configuration name="PathOptimizer" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <module name="PTPSim" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/TrajectoryPlanning" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/TrajectoryPlanning/PathOptimizer.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
-    <configuration name="PathOptimizer2" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <module name="PTPSim" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/TrajectoryPlanning" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/TrajectoryPlanning/PathOptimizer2.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
-    <configuration name="PathOptimizerTest1" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <module name="PTPSim" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/TrajectoryPlanning" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/TrajectoryPlanning/PathOptimizerTest1.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -520,7 +546,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="cubic_spline" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration name="pathOptimizer4" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="PTPSim" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -528,11 +554,74 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Curves" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/TrajectoryPlanning" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Curves/cubic_spline.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/TrajectoryPlanning/pathOptimizer4.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="pathPlanner4" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="PTPSim" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/TrajectoryPlanning" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/TrajectoryPlanning/pathPlanner4.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="speedProfileOptimizer4" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="PTPSim" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/TrajectoryPlanning" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/TrajectoryPlanning/speedProfileOptimizer4.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="test4" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="PTPSim" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/TrajectoryPlanning" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/TrajectoryPlanning/test4.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -543,19 +632,19 @@
     </configuration>
     <list>
       <item itemvalue="Python.Unnamed" />
-      <item itemvalue="Python.PathOptimizer2" />
-      <item itemvalue="Python.PathOptimizerTest1" />
-      <item itemvalue="Python.PathOptimizer" />
-      <item itemvalue="Python.cubic_spline" />
+      <item itemvalue="Python.pathPlanner4" />
+      <item itemvalue="Python.pathOptimizer4" />
+      <item itemvalue="Python.speedProfileOptimizer4" />
+      <item itemvalue="Python.test4" />
       <item itemvalue="Python.MPC" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.PathOptimizerTest1" />
-        <item itemvalue="Python.PathOptimizer" />
         <item itemvalue="Python.MPC" />
-        <item itemvalue="Python.cubic_spline" />
-        <item itemvalue="Python.PathOptimizer2" />
+        <item itemvalue="Python.speedProfileOptimizer4" />
+        <item itemvalue="Python.test4" />
+        <item itemvalue="Python.pathOptimizer4" />
+        <item itemvalue="Python.pathPlanner4" />
       </list>
     </recent_temporary>
   </component>
@@ -623,15 +712,15 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="64" y="-11" width="1617" height="1062" extended-state="6" />
+    <frame x="65" y="-4" width="1615" height="1054" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49779087" visible="true" weight="0.21802142" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49779087" visible="true" weight="0.27599245" />
       <window_info id="Structure" order="1" sideWeight="0.5022091" side_tool="true" weight="0.24448645" />
       <window_info id="Favorites" order="2" sideWeight="0.5022091" side_tool="true" weight="0.24448645" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32903227" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49716446" weight="0.4903226" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.49716446" visible="true" weight="0.28172043" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.14408602" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -642,7 +731,7 @@
       <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.5028355" side_tool="true" weight="0.28494623" />
       <window_info anchor="bottom" id="Docker" order="11" show_stripe_button="false" />
       <window_info anchor="bottom" id="Database Changes" order="12" />
-      <window_info anchor="bottom" id="Statistic" order="13" weight="0.5978495" />
+      <window_info anchor="bottom" id="Statistic" order="13" weight="0.62580645" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -699,60 +788,6 @@
     <SUITE FILE_PATH="coverage/PlanningSim_4$test2.coverage" NAME="test2 Coverage Results" MODIFIED="1554722425332" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/TrajectoryPlanning" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/Scenarios/multiLane.png" />
-    <entry file="file://$PROJECT_DIR$/TrajectoryPlanning/SpeedProfileCost.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-3547">
-          <caret line="11" lean-forward="true" selection-start-line="11" selection-end-line="11" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/TrajectoryPlanning/SpeedProfileGenerator.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="143">
-          <caret line="47" column="31" selection-start-line="47" selection-start-column="31" selection-end-line="47" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/TrajectoryPlanning/SpeedProfilePlanner.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="199">
-          <caret line="273" column="26" lean-forward="true" selection-start-line="273" selection-start-column="26" selection-end-line="273" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Scenarios/test1.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="243">
-          <caret line="9" column="8" selection-start-line="9" selection-start-column="8" selection-end-line="9" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/anaconda3/lib/python3.6/site-packages/cvxpy/utilities/key_utils.py" />
-    <entry file="file://$PROJECT_DIR$/Curves/test2.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-2482">
-          <caret line="28" selection-start-line="28" selection-end-line="28" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Curves/spiral.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Curves/test1.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1080">
-          <caret line="43" column="14" selection-start-line="43" selection-start-column="14" selection-end-line="43" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/anaconda3/lib/python3.6/site-packages/cvxpy/__init__.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="351">
-          <caret line="13" column="9" selection-start-line="13" selection-start-column="9" selection-end-line="13" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$USER_HOME$/anaconda3/lib/python3.6/site-packages/cvxpy/expressions/variable.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="467">
@@ -761,13 +796,6 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/FrenetMath/ReferenceLine.py" />
-    <entry file="file://$PROJECT_DIR$/FrenetMath/calHeading.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="193">
-          <caret line="13" column="37" lean-forward="true" selection-start-line="13" selection-start-column="37" selection-end-line="13" selection-end-column="37" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/FrenetMath/efficients.py" />
     <entry file="file://$PROJECT_DIR$/Curves/CubicSpiral.py">
       <provider selected="true" editor-type-id="text-editor">
@@ -839,66 +867,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$USER_HOME$/anaconda3/lib/python3.6/site-packages/matplotlib/axes/_base.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="186">
-          <caret line="242" selection-start-line="242" selection-end-line="242" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/TrajectoryPlanning/test3.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1462">
-          <caret line="57" lean-forward="true" selection-start-line="57" selection-end-line="57" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/TrajectoryPlanning/test2.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="6332">
-          <caret line="293" lean-forward="true" selection-start-line="293" selection-end-line="293" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$USER_HOME$/anaconda3/lib/python3.6/site-packages/casadi/casadi.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="255">
           <caret line="5891" selection-start-line="5891" selection-end-line="5891" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/FrenetMath/CartesianToFrenet.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="81">
-          <caret line="3" lean-forward="true" selection-start-line="3" selection-end-line="3" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/FrenetMath/kappaCalculate.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="20" column="30" selection-start-line="20" selection-start-column="30" selection-end-line="20" selection-end-column="30" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/FrenetMath/FrenetToCartesian.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="5" column="51" selection-start-line="5" selection-start-column="51" selection-end-line="5" selection-end-column="51" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/model/simModel.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2133">
-          <caret line="82" selection-start-line="82" selection-end-line="82" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/TrajectoryPlanning/test1.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1512">
-          <caret line="56" column="11" selection-start-line="56" selection-start-column="11" selection-end-line="56" selection-end-column="11" />
         </state>
       </provider>
     </entry>
@@ -909,52 +881,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/TrajectoryPlanning/PathCost.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="324">
-          <caret line="65" column="4" selection-start-line="65" selection-start-column="4" selection-end-line="65" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Scenarios/TwoLane.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="446">
           <caret line="20" column="80" selection-start-line="20" selection-start-column="80" selection-end-line="20" selection-end-column="80" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/TrajectoryPlanning/pathPlaner2.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-90">
-          <caret line="162" column="7" selection-start-line="162" selection-start-column="7" selection-end-line="162" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Curves/Cubic.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-297">
-          <caret line="21" column="4" selection-start-line="21" selection-start-column="4" selection-end-line="21" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/TrajectoryPlanning/PathLattice.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-842">
-          <caret line="73" column="21" lean-forward="true" selection-start-line="73" selection-start-column="21" selection-end-line="73" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/TrajectoryPlanning/pathLatticeXY.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-2354">
-          <caret line="91" lean-forward="true" selection-start-line="91" selection-end-line="91" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/TrajectoryPlanning/pathPlannerXY.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-383">
-          <caret line="182" column="24" lean-forward="true" selection-start-line="182" selection-start-column="24" selection-end-line="182" selection-end-column="24" />
         </state>
       </provider>
     </entry>
@@ -965,77 +895,296 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/TrajectoryPlanning/SpeedProfileOptimizer.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="351">
-          <caret line="439" column="37" lean-forward="true" selection-start-line="439" selection-start-column="37" selection-end-line="439" selection-end-column="37" />
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="FIRST">
+          <first_editor relative-caret-position="486">
+            <caret line="18" selection-start-line="18" selection-end-line="18" />
+          </first_editor>
+          <second_editor />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/control/MPC.py">
+    <entry file="file://$PROJECT_DIR$/TrajectoryPlanning/PathOptimizer.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="16011">
-          <caret line="598" column="20" selection-start-line="598" selection-start-column="20" selection-end-line="598" selection-end-column="20" />
+        <state relative-caret-position="-2079">
+          <caret line="86" column="27" lean-forward="true" selection-start-line="86" selection-start-column="27" selection-end-line="86" selection-end-column="27" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/TrajectoryPlanning/PathPlanner.py">
+    <entry file="file://$PROJECT_DIR$/FrenetMath/CartesianToFrenet.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="269">
-          <caret line="214" column="37" lean-forward="true" selection-start-line="214" selection-start-column="37" selection-end-line="214" selection-end-column="37" />
+        <state relative-caret-position="81">
+          <caret line="3" lean-forward="true" selection-start-line="3" selection-end-line="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/TrajectoryPlanning/SpeedProfilePlanner.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="975">
+          <caret line="280" column="52" lean-forward="true" selection-start-line="280" selection-start-column="52" selection-end-line="280" selection-end-column="52" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/TrajectoryPlanning/PathLattice.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="297">
+          <caret line="71" column="28" lean-forward="true" selection-start-line="71" selection-start-column="28" selection-end-line="71" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/FrenetMath/calHeading.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="162">
+          <caret line="13" column="4" selection-start-line="13" selection-start-column="4" selection-end-line="13" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Curves/Cubic.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-649">
+          <caret line="21" column="4" selection-start-line="21" selection-start-column="4" selection-end-line="21" selection-end-column="4" />
           <folding>
-            <element signature="e#1282#1313#0" expanded="true" />
-            <marker date="1559721069599" expanded="true" signature="4902:8246" ph="..." />
-            <marker date="1559721069599" expanded="true" signature="6890:8246" ph="..." />
+            <element signature="e#78#108#0" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Curves/cubic_spline.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="377">
-          <caret line="355" column="35" selection-start-line="355" selection-start-column="35" selection-end-line="355" selection-end-column="35" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/FrenetMath/referenceLine.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="188">
-          <caret line="36" column="14" selection-start-line="36" selection-start-column="14" selection-end-line="36" selection-end-column="14" />
+        <state relative-caret-position="162">
+          <caret line="36" column="13" selection-start-line="36" selection-start-column="13" selection-end-line="36" selection-end-column="13" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/TrajectoryPlanning/PathOptimizer2.py">
+    <entry file="file://$PROJECT_DIR$/TrajectoryPlanning/PathPlanner.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-468">
-          <caret line="310" column="46" selection-start-line="310" selection-start-column="46" selection-end-line="310" selection-end-column="46" />
+        <state relative-caret-position="6778">
+          <caret line="281" column="25" selection-start-line="281" selection-start-column="25" selection-end-line="281" selection-end-column="25" />
+          <folding>
+            <element signature="e#1295#1326#0" expanded="true" />
+            <marker date="1560325794956" expanded="true" signature="4914:8258" ph="..." />
+            <marker date="1560325794956" expanded="true" signature="6902:8258" ph="..." />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/TrajectoryPlanning/PathOptimizerTest1.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="123">
-          <caret line="269" column="35" selection-start-line="269" selection-start-column="35" selection-end-line="269" selection-end-column="35" />
+        <state relative-caret-position="290">
+          <caret line="274" column="23" lean-forward="true" selection-start-line="274" selection-start-column="23" selection-end-line="274" selection-end-column="23" />
           <folding>
             <element signature="e#1229#1249#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/TrajectoryPlanning/PathOptimizer.py">
+    <entry file="file://$PROJECT_DIR$/TrajectoryPlanning/PathCost.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-432">
-          <caret line="259" lean-forward="true" selection-start-line="259" selection-end-line="259" />
+        <state relative-caret-position="1593">
+          <caret line="62" column="12" lean-forward="true" selection-start-line="62" selection-start-column="12" selection-end-line="62" selection-end-column="12" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/README.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="FIRST">
-          <first_editor relative-caret-position="486">
-            <caret line="18" lean-forward="true" selection-start-line="18" selection-end-line="18" />
-          </first_editor>
-          <second_editor />
+    <entry file="file://$PROJECT_DIR$/TrajectoryPlanning/pathLatticeXY2.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="411">
+          <caret line="114" column="63" selection-start-line="114" selection-start-column="63" selection-end-line="114" selection-end-column="63" />
+          <folding>
+            <element signature="e#2546#2564#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/TrajectoryPlanning/pathPlaner2.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-522">
+          <caret line="293" column="4" selection-start-line="293" selection-start-column="4" selection-end-line="293" selection-end-column="4" />
+          <folding>
+            <element signature="e#1233#1264#0" expanded="true" />
+            <marker date="1560325794964" expanded="true" signature="5344:9039" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/TrajectoryPlanning/PathOptimizer2.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-17">
+          <caret line="90" column="11" selection-start-line="90" selection-start-column="11" selection-end-line="90" selection-end-column="11" />
+          <folding>
+            <element signature="e#2113#2133#0" expanded="true" />
+            <marker date="1560262051281" expanded="true" signature="8337:8996" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/anaconda3/lib/python3.6/site-packages/matplotlib/axes/_base.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="186">
+          <caret line="242" selection-start-line="242" selection-end-line="242" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/FrenetMath/FrenetToCartesian.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="27">
+          <caret line="3" column="4" selection-start-line="3" selection-start-column="4" selection-end-line="3" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/TrajectoryPlanning/pathPlannerXY.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="665">
+          <caret line="274" column="35" selection-start-line="274" selection-start-column="35" selection-end-line="274" selection-end-column="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/TrajectoryPlanning/pathLatticeXY3.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="155" selection-start-line="155" selection-end-line="155" />
+          <folding>
+            <marker date="1560305637549" expanded="true" signature="4501:6834" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/TrajectoryPlanning/pathPlanner3.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="63">
+          <caret line="205" column="41" lean-forward="true" selection-start-line="205" selection-start-column="41" selection-end-line="205" selection-end-column="41" />
+          <folding>
+            <element signature="e#1248#1279#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/FrenetMath/kappaCalculate.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1431">
+          <caret line="53" selection-start-line="53" selection-end-line="53" />
+          <folding>
+            <element signature="e#74#85#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/TrajectoryPlanning/pathOptimizer3.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="213">
+          <caret line="312" column="37" lean-forward="true" selection-start-line="312" selection-start-column="37" selection-end-line="312" selection-end-column="37" />
+          <folding>
+            <element signature="e#1226#1246#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/TrajectoryPlanning/SpeedProfileOptimizer3.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="243">
+          <caret line="55" column="16" lean-forward="true" selection-start-line="55" selection-start-column="16" selection-end-line="55" selection-end-column="16" />
+          <folding>
+            <marker date="1560263121417" expanded="true" signature="9122:9384" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/TrajectoryPlanning/pathPlanner4.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="317">
+          <caret line="58" column="33" selection-start-line="58" selection-start-column="33" selection-end-line="58" selection-end-column="33" />
+          <folding>
+            <element signature="e#2471#2502#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/TrajectoryPlanning/speedOptimizer2.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1242">
+          <caret line="507" column="46" lean-forward="true" selection-start-line="507" selection-start-column="46" selection-end-line="507" selection-end-column="46" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/TrajectoryPlanning/pathLatticeXY4.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="148">
+          <caret line="137" selection-start-line="137" selection-end-line="137" />
+          <folding>
+            <element signature="e#2564#2582#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/TrajectoryPlanning/pathOptimizer4.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="297">
+          <caret line="68" column="10" selection-start-line="68" selection-start-column="10" selection-end-line="68" selection-end-column="10" />
+          <folding>
+            <element signature="e#2451#2471#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/TrajectoryPlanning/test4.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-10">
+          <caret line="9" column="69" lean-forward="true" selection-start-line="9" selection-start-column="69" selection-end-line="9" selection-end-column="69" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/TrajectoryPlanning/test1.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-5354">
+          <caret line="56" column="11" selection-start-line="56" selection-start-column="11" selection-end-line="56" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/TrajectoryPlanning/test2.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="640">
+          <caret line="293" lean-forward="true" selection-start-line="293" selection-end-line="293" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/TrajectoryPlanning/test3.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="27">
+          <caret line="57" lean-forward="true" selection-start-line="57" selection-end-line="57" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/TrajectoryPlanning/speedProfileOptimizer4.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="327">
+          <caret line="39" column="16" selection-start-line="39" selection-start-column="16" selection-end-line="39" selection-end-column="16" />
+          <folding>
+            <marker date="1560340212868" expanded="true" signature="12280:13139" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Curves/cubic_spline.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="4951">
+          <caret line="211" column="4" selection-start-line="211" selection-start-column="4" selection-end-line="211" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/model/simModel.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-607">
+          <caret line="42" column="4" selection-start-line="42" selection-start-column="4" selection-end-line="42" selection-end-column="4" />
+          <folding>
+            <element signature="e#1230#1248#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/control/MPC.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="203">
+          <caret line="447" column="35" selection-start-line="447" selection-start-column="35" selection-end-line="447" selection-end-column="35" />
         </state>
       </provider>
     </entry>

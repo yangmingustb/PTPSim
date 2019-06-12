@@ -8,7 +8,6 @@ import Curves.Cubic as cubic
 import FrenetMath.FrenetToCartesian as fretoc
 
 
-
 #   refLineRho = 0.0	# 参考线为道路中心线
 r_circle = 1.0
 d_circle = 2.0
@@ -18,7 +17,6 @@ alpha1 = 100
 alpha2 = 1
 alpha3 = 10
 alpha4 = 0.0
-
 
 
 def kappa(father_node, son_node, efficients):
@@ -37,7 +35,6 @@ def reference_line_cost(father_node, son_node, refl):
 
 def collision_risk(father_node, son_node, obstacle):
 	"""
-
 	:param father_node:
 	:param son_node:
 	:param obstacle:
