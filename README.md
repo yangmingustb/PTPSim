@@ -15,4 +15,8 @@ this is a trajectory planning simulator using Python language
 #	![avatar](https://github.com/yangmingustb/PTPSim/blob/master/SimGraph/pathOptimizationKappa060415.svg)
 #	![avatar](https://github.com/yangmingustb/PTPSim/blob/master/SimGraph/pathOptimizationPath060414.svg)
 #	![avatar](https://github.com/yangmingustb/PTPSim/blob/master/SimGraph/pathOptimizationKappa060413.svg)
+#	![avatar](https://github.com/yangmingustb/PTPSim/blob/master/SimGraph/pathOptimizationTestPath060414.svg)
+#	![avatar](https://github.com/yangmingustb/PTPSim/blob/master/SimGraph/pathOptimizationTestKappa060413.svg)
+#	![avatar](https://github.com/yangmingustb/PTPSim/blob/master/SimGraph/pathOptimization4Path060404.svg)
+#	![avatar](https://github.com/yangmingustb/PTPSim/blob/master/SimGraph/pathPlanner3_061102.tiff)
 
