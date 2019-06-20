@@ -209,8 +209,8 @@ def plotGraph():
 	if showRefLine:
 		x = [i for i in range(100)]
 		refline = [refLineRho for i in range(100)]
-		plt.plot(x, refline, c='orange', linestyle="--", linewidth=1.2, alpha=1, label = 'Reference Line')
-		plt.legend(loc = 1)
+		plt.plot(x, refline, c='green', linestyle="--", linewidth=1.2, alpha=1, label = 'Reference Line')
+		# plt.legend(loc = 1)
 	#	sampling_point = PathLattice.sampling(longitudinal_num, lateral_num, latera_step, longitudinal_step)
 	#	用来显示lattice图像
 	#   PathLattice.generate_lattice()
@@ -236,10 +236,9 @@ def plotGraph():
 		tmp_theta.extend(theta)
 
 	plt.plot(tmp_s, tmp_rho, c='b', linewidth=0.8, label='Rough Path')
-	plt.legend(loc=2)
+	# plt.legend(loc=2)
 
 	if showVehicleAnimation:
-
 		car.simVehicle([begin[0], begin[1]], 0 * math.pi / 180, 'g', 1)
 
 		time_stamp = 0
@@ -257,9 +256,9 @@ def plotGraph():
 	plt.xticks(fontproperties='Times New Roman', fontsize=10)
 	plt.yticks(fontproperties='Times New Roman', fontsize=10)
 	plt.xlim(-1, 110)
-	plt.ylim(-4, 4)
+	plt.ylim(-4, 20)
 	plt.axis("equal")
-	plt.savefig('/home/ming/桌面/PTPSim/SimGraph/pathPlanner06051432.tiff', dpi=600)
+	plt.savefig('../SimGraph/pathPlanner060502.tiff', dpi=600)
 
 
 def plotkappaGraph():

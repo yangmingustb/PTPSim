@@ -34,7 +34,7 @@ import numpy as np
 import matplotlib.pyplot as plt
 
 
-showLane=False
+showLane=True
 LaneWidth = 3.75  # [m]
 left = 1
 

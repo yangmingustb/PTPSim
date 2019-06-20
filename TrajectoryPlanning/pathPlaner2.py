@@ -207,8 +207,8 @@ def calc_final_path(ngoal, closedset):
 
 def plotGraph():
 	print(__file__ + " start!!")
-	plt.figure(figsize=(3.5, 3.5))  # 单位英寸， 3.5
-	p1 = [0.15, 0.15, 0.75, 0.65]
+	plt.figure(figsize=(3.5, 3.0))  # 单位英寸， 3.5
+	p1 = [0.15, 0.15, 0.80, 0.8]
 	plt.axes(p1)
 	plt.axis("equal")
 	plt.grid(linestyle="--", linewidth=0.5, alpha=1)
@@ -287,7 +287,7 @@ def plotGraph():
 	plt.xlim(-10, 30)
 	plt.ylim(-5, 80)
 	# plt.savefig('/home/ming/桌面/PTPSim/SimGraph/pathPlannerXY_5_30_8_48.svg')
-	plt.savefig('/home/ming/桌面/PTPSim/SimGraph/pathPlanner2_061101.tiff', dpi=600)
+	plt.savefig('../SimGraph/pathPlanner2_061101.tiff', dpi=600)
 	plt.show()
 
 

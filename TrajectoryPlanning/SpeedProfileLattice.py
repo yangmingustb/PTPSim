@@ -129,7 +129,7 @@ if __name__ == '__main__':
 	# plt.legend(loc='upper right')
 	# plt.legend()
 	# 将文件保存至文件中并且画出图
-	plt.savefig('/home/ming/桌面/PTPSim/SimGraph/speedLattice01.svg')
+	plt.savefig('../SimGraph/speedLattice01.svg')
 	plt.show()
 
 

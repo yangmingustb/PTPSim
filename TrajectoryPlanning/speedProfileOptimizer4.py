@@ -439,12 +439,12 @@ def plot_figure():
 	plt.rcParams['font.sans-serif'] = ['Times New Roman']  # 如果要显示中文字体，则在此处设为：SimHei
 
 	# plt.style.use('ggplot')
-	plt.figure(figsize=(3.5, 8))  # 单位英寸， 3.5
+	plt.figure(figsize=(3.5, 4.2))  # 单位英寸， 3.5
 
-	p1 = [0.18, 0.7, 0.72, 0.2]
-	p2 = [0.18, 0.5, 0.72, 0.1]
-	p3 = [0.18, 0.3, 0.72, 0.1]
-	p4 = [0.18, 0.1, 0.72, 0.1]
+	p1 = [0.18, 0.85, 0.72, 0.1]
+	p2 = [0.18, 0.60, 0.72, 0.08]
+	p3 = [0.18, 0.35, 0.72, 0.05]
+	p4 = [0.18, 0.1, 0.72, 0.05]
 	ax1 = plt.axes(p1)  # 2行2列,第一个图
 	ax2 = plt.axes(p2)  # 2行2列,第一个图
 	ax3 = plt.axes(p3)  # 2行2列,第一个图
@@ -458,7 +458,7 @@ def plot_figure():
 	# plt.xticks(fontproperties='Times New Roman', fontsize=10)
 	# plt.yticks(fontproperties='Times New Roman', fontsize=10)
 	# ax1.set_xlim(-1, 9)
-	ax1.set_ylim(190, 280)
+	# ax1.set_ylim(190, 280)
 	#   plt.grid(True)
 	#   plt.title('A simple plot')
 
@@ -475,7 +475,7 @@ def plot_figure():
 	ax2.set_xlabel('Time (s)', font1)
 	ax2.set_ylabel('v (m/s)', font1)
 	# ax2.set_xlim(-1, 9)
-	ax2.set_ylim(-1, 20)
+	# ax2.set_ylim(-1, 20)
 
 	acc_tmp = []
 	for i in range(len(s_tmp) - 2):
@@ -491,7 +491,7 @@ def plot_figure():
 	ax3.set_xlabel('Time (s)', font1)
 	ax3.set_ylabel(r'a (m/s$\mathrm{^2}$)', font1)
 	# ax3.set_xlim(-1, 9)
-	ax3.set_ylim(-4, 4)
+	# ax3.set_ylim(-4, 4)
 
 	jerk_tmp = []
 	for i in range(len(s_tmp) - 3):
@@ -507,7 +507,7 @@ def plot_figure():
 	ax4.set_xlabel('Time (s)', font1)
 	ax4.set_ylabel(r'jerk (m/s$\mathrm{^3}$)', font1)
 	# ax4.set_xlim(-1, 9)
-	ax4.set_ylim(-10, 10)
+	# ax4.set_ylim(-10, 10)
 	plt.savefig('../SimGraph/speedOptimizer4_061101.svg')
 	plt.savefig('../SimGraph/speedOptimizer4_061101.tiff', dpi=600)
 	#   plt.grid(True)

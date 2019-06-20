@@ -47,7 +47,7 @@ show_vehicle_animation = False
 showRefinedPath = True
 showRoughPath = True
 showVehicleStart = True
-showRoughKappa=False
+showRoughKappa=True
 showRefinedKappa=True
 
 s_max = 100.0
@@ -333,28 +333,20 @@ def plotGraph():
 	plt.xlim(30, 140)
 	plt.ylim(80, 130)
 	# plt.axis('equal')
-	plt.savefig('../SimGraph/pathOptimization3Path060403.svg')
-	plt.savefig('../SimGraph/pathOptimization3Path060403.tiff', dpi=600)
+	plt.savefig('../SimGraph/pathOptimization3Path060404.svg')
+	plt.savefig('../SimGraph/pathOptimization3Path060404.tiff', dpi=600)
 
-	plt.figure(figsize=(3.5, 3.5 * 0.618))  # 单位英寸， 3.5
+	plt.figure(figsize=(3.5, 1.8))  # 单位英寸， 3.5
 	font1 = {'family': 'Times New Roman', 'weight': 'normal', 'size': 10}
 	plt.rcParams['font.sans-serif'] = ['Times New Roman']  # 如果要显示中文字体，则在此处设为：SimHei
 
-	p2 = [0.2, 0.2, 0.7, 0.6]
+	p2 = [0.2, 0.25, 0.7, 0.6]
 	plt.axes(p2)
 	if showRoughKappa:
-		tmp_rough_s = []
-		tmp_rough_rho = []
-		for i in range(len(tmp_s)):
-			if 10* i <= (len(tmp_s)-1):
-				tmp_rough_s.append(tmp_s[10*i])
-				tmp_rough_rho.append(tmp_rho[10*i])
-			else:break
-
-		rough_kappa = calKappa.path_kappa(tmp_rough_rho, tmp_rough_s, efficients)
+		rough_kappa = calKappa.path_kappa(tmp_rho, tmp_s, efficients)
 		print("--------------")
 		print(len(rough_kappa))
-		plt.plot(s[0:n_s-2], rough_kappa, c= 'magenta', linestyle="-", linewidth=0.5, alpha=1,label='Rough Path Curvature Profile')
+		plt.plot(tmp_s[0:-2], rough_kappa, c= 'magenta', linestyle="-", linewidth=0.5, alpha=1,label='Rough Path Curvature Profile')
 
 	if showRefinedKappa:
 		kappa_list = calKappa.path_kappa(rho_vector, s, efficients)
@@ -371,8 +363,8 @@ def plotGraph():
 		plt.xlim(90, 210)
 		plt.ylim(-0.1, 0.3)
 		plt.legend(loc=0)  # 图例位置自动
-		plt.savefig('../SimGraph/pathOptimization3Kappa060403.svg')
-		plt.savefig('../SimGraph/pathOptimization3Kappa060403.tiff', dpi=600)
+		plt.savefig('../SimGraph/pathOptimization3Kappa060404.svg')
+		plt.savefig('../SimGraph/pathOptimization3Kappa060404.tiff', dpi=600)
 		plt.show()
 
 

@@ -111,8 +111,8 @@ def plot_arrow(x, y, yaw, length=2, width=0.1):
 
 if __name__ == '__main__':
     # plt.style.use('ggplot')
-    plt.figure(figsize=(3.5, 3.5 * 0.618))  # 单位英寸， 3.5
-    plt.axes([0.15, 0.2, 0.8, 0.6])
+    plt.figure(figsize=(3.5, 3.5 * 0.5))  # 单位英寸， 3.5
+    plt.axes([0.15, 0.3, 0.8, 0.65])
     plt.grid(linestyle="--", linewidth=0.5, alpha=1)
     # plt.rcParams['font.sans-serif'] = ['Times New Roman']  # 如果要显示中文字体，则在此处设为：SimHei
     # plt.rcParams['axes.unicode_minus'] = False  # 显示负号
@@ -141,7 +141,7 @@ if __name__ == '__main__':
     plt.xticks(fontproperties='Times New Roman', fontsize=10)
     plt.yticks(fontproperties='Times New Roman', fontsize=10)
     plt.xlim(-1, 110)
-    plt.ylim(-4, 4)
+    plt.ylim(-3.5, 3.5)
 
     '''
     plt.legend(loc=0, numpoints=1)
@@ -153,11 +153,12 @@ if __name__ == '__main__':
     ax.spines['top'].set_visible(False)  # 去掉上边框
     ax.spines['right'].set_visible(False)  # 去掉右边框
     '''
-    center_line = plt.plot([0, 105], [0, 0], color='lime', linewidth=0.6, linestyle='-', label='reference line')
+    center_line = plt.plot([0, 105], [0, 0], color='lime', linewidth=0.6, linestyle='--', label='reference line')
     plot_arrow(105, 0, 0)
 
     # plt.legend(loc='upper right')
     # plt.legend()
     # 将文件保存至文件中并且画出图
-    plt.savefig('/home/ming/桌面/PTPSim/SimGraph/pathLattice01.svg')
+    plt.savefig('../SimGraph/pathLattice02.svg')
+    plt.savefig('../SimGraph/pathLattice02.tiff', dpi=600)
     plt.show()

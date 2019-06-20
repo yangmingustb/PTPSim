@@ -31,7 +31,7 @@ import numpy
 show_node = True
 show_speed_lattice = 0
 show_speed_result = 1
-show_obs = 1
+show_obs = False
 
 max_t = 8  # 8s
 max_s = 100  # 采样高度，100m
@@ -50,9 +50,8 @@ init_jerk = 0  # init_jerk
 init_s = 0
 init_t = 0
 
-max_acc = 2.5  # liu chang liu. 2017 IV. speed profile planning
-ref_speed = 12
-
+# max_acc = 2.5  # liu chang liu. 2017 IV. speed profile planning
+# ref_speed = 4
 static_obs = speedcost.static_obs
 
 
@@ -244,7 +243,7 @@ def SpeedMain():
     print(__file__ + " start!!")
     # plt.style.use('ggplot')
     plt.figure(figsize=(3.5, 3.5 * 0.618))  # 单位英寸， 3.5
-    plt.axes([0.15, 0.2, 0.8, 0.7])
+    plt.axes([0.15, 0.2, 0.8, 0.75])
     plt.grid(linestyle="--", linewidth=0.5, alpha=0.8)
 
     closed_set = dijkstra_planning()
@@ -274,9 +273,9 @@ def SpeedMain():
 if __name__ == '__main__':
     SpeedMain()
     # plt.grid(True)
-    plt.xlim(-1, 10)
+    plt.xlim(-1, 9)
     plt.ylim(-10, 110)
     plt.xticks(fontproperties='Times New Roman', fontsize=10)
     plt.yticks(fontproperties='Times New Roman', fontsize=10)
-    plt.savefig('/home/ming/桌面/PTPSim/SimGraph/speedPlanner01.svg')
+    plt.savefig('../SimGraph/speedPlanner002.tiff', dpi=600)
     plt.show()

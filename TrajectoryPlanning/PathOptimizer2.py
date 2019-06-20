@@ -72,12 +72,13 @@ import TrajectoryPlanning.pathPlaner2 as pathPlanner
 
 show_animation = True
 show_obstacle = True
-show_vehicle_animation = False
-showRefinedPath = True
+show_vehicle_animation = True
+showRefinedPath = False
 showRoughPath = True
-showVehicleStart = True
+showVehicleStart = False
 showRoughKappa = True
 showRefinedKappa = True
+show_vehicle_start = False
 
 s_max = 100.0
 reso_s = 1.0
@@ -278,11 +279,11 @@ def ToMPC():
 
 def plotGraph():
 	# plot graph
-	plt.figure(figsize=(3.5, 3.5))  # 单位英寸， 3.5
+	plt.figure(figsize=(3.5, 3.0))  # 单位英寸， 3.5
 	font1 = {'family': 'Times New Roman', 'weight': 'normal', 'size': 10}
 	plt.rcParams['font.sans-serif'] = ['Times New Roman']  # 如果要显示中文字体，则在此处设为：SimHei
 
-	p1 = [0.15, 0.15, 0.75, 0.65]
+	p1 = [0.15, 0.15, 0.80, 0.8]
 	plt.axes(p1)
 
 	efficients = cubicSpline.saveEfficients()
@@ -319,6 +320,11 @@ def plotGraph():
 			tmpx, tmpy, tmptheta = ftc.frenetToXY(static_obs[i][0], static_obs[i][1], obstacleHeading, efficients)
 			car.simVehicle([tmpx, tmpy], tmptheta, 'r', 1)
 
+
+	if show_vehicle_start:
+		x0, y0, theta0 = ftc.frenetToXY(start_SRho[0], start_SRho[1], start_SRho[2], efficients)
+		car.simVehicle([x0, y0], theta0, 'blue', 1)
+
 	if show_vehicle_animation:
 		for i in range(0, n_s, 1):
 			time_stamp = i / n_s + 0.3
@@ -332,7 +338,7 @@ def plotGraph():
 			if 10 <= i <= n_s:
 				if (i % 3) == 0:
 					car.simVehicle([x[i], y[i]], theta[i], 'b', time_stamp)
-			plt.pause(0.001)
+			# plt.pause(0.001)
 
 	plt.grid(linestyle="--", linewidth=0.5, alpha=1)
 	# plt.title('x-y Graph', font1)
@@ -345,51 +351,43 @@ def plotGraph():
 	plt.xlim(-10, 30)
 	plt.ylim(-5, 80)
 
-	plt.savefig('../SimGraph/pathOptimization2Path060415.svg')
-	plt.savefig('../SimGraph/pathOptimization2Path060415.tiff', dpi=600)
+	plt.savefig('../SimGraph/pathOptimization2Path060406.svg')
+	plt.savefig('../SimGraph/pathOptimization2Path060406.tiff', dpi=600)
 
-	plt.figure(figsize=(3.5, 3.5 * 0.618))  # 单位英寸， 3.5
+	plt.figure(figsize=(3.5, 1.8))  # 单位英寸， 3.5
 	font1 = {'family': 'Times New Roman', 'weight': 'normal', 'size': 10}
 	plt.rcParams['font.sans-serif'] = ['Times New Roman']  # 如果要显示中文字体，则在此处设为：SimHei
 
-	p2 = [0.2, 0.2, 0.7, 0.6]
+	p2 = [0.2, 0.25, 0.75, 0.60]
 	plt.axes(p2)
 
 	if showRoughKappa:
-		tmp_rough_s = []
-		tmp_rough_rho = []
-		for i in range(len(tmp_s)):
-			if 10 * i <= (len(tmp_s) - 1):
-				tmp_rough_s.append(tmp_s[10 * i])
-				tmp_rough_rho.append(tmp_rho[10 * i])
-			else:
-				break
-
-		rough_kappa = calKappa.path_kappa(tmp_rough_rho, tmp_rough_s, efficients)
+		rough_kappa = calKappa.path_kappa(tmp_rho, tmp_s, efficients)
 		print("--------------")
 		print(len(rough_kappa))
-		plt.plot(s[0:n_s - 2], rough_kappa, c='magenta', linestyle="-", linewidth=0.5, alpha=1,label='Rough Path Curvature Profile')
+		print(len(tmp_s))
+		plt.plot(tmp_s[0:-2], rough_kappa, c='magenta', linestyle="-", linewidth=0.5, alpha=1,label='Rough Path Curvature Profile')
 
-		if showRefinedKappa:
+	if showRefinedKappa:
 
-			kappa_refined = calKappa.path_kappa(rho_vector, s, efficients)
-			plt.plot(s[0:n_s + 1], kappa_refined, c='cyan', linestyle="-", linewidth=0.5, alpha=1,
-			         label='Refined Path Curvature Profile')
+		kappa_refined = calKappa.path_kappa(rho_vector, s, efficients)
+		plt.plot(s[0:n_s + 1], kappa_refined, c='cyan', linestyle="-", linewidth=0.5, alpha=1,
+		         label='Refined Path Curvature Profile')
 
-			y = [max(kappa_refined) for i in range(n_s + 1)]
-			y2 = [min(kappa_refined) for i in range(n_s + 1)]
-			plt.plot(s[0:n_s + 1], y, c='k', linestyle="--", linewidth=0.5, alpha=1)
-			plt.plot(s[0:n_s + 1], y2, c='k', linestyle="--", linewidth=0.5, alpha=1)
-			plt.title('Curvature Profile', font1)
-			plt.grid(linestyle="--", linewidth=0.5, alpha=1)
-			plt.xlabel('s (m)', font1)
-			plt.ylabel('kappa (1/m)', font1)
-			plt.xlim(-1, 110)
-			plt.ylim(-0.1, 0.2)
-			plt.legend(loc=0)  # 图例位置自动
+		y = [max(kappa_refined) for i in range(n_s + 1)]
+		y2 = [min(kappa_refined) for i in range(n_s + 1)]
+		# plt.plot(s[0:n_s + 1], y, c='k', linestyle="--", linewidth=0.5, alpha=1)
+		# plt.plot(s[0:n_s + 1], y2, c='k', linestyle="--", linewidth=0.5, alpha=1)
+		plt.title('Curvature Profile', font1)
+		plt.grid(linestyle="--", linewidth=0.5, alpha=1)
+		plt.xlabel('s (m)', font1)
+		plt.ylabel('kappa (1/m)', font1)
+		plt.xlim(-1, 110)
+		plt.ylim(-0.1, 0.2)
+		plt.legend(loc=0)  # 图例位置自动
 
-		plt.savefig('../SimGraph/pathOptimization2Kappa060415.svg')
-		plt.savefig('../SimGraph/pathOptimization2Kappa060415.tiff', dpi=600)
+		plt.savefig('../SimGraph/pathOptimization2Kappa060406.svg')
+		plt.savefig('../SimGraph/pathOptimization2Kappa060406.tiff', dpi=600)
 		plt.show()
 	return None
 

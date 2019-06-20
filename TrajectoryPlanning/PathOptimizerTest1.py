@@ -42,13 +42,13 @@ reso_s = 1.0
 n_s = int(s_max / reso_s)
 r_circle = 1.0  # 车体包络圆
 d_circle = 2.0  # 圆心间距
-obs_inflation = 1.0
+obs_inflation = 2
 safe_distance = obs_inflation + r_circle
 kappa_max = 0.187
 w_d = 1.0
 w_dd = 10.0
-w_ddd = 50.0
-w_ref = 0.1
+w_ddd = 100.0
+w_ref = 0.05
 
 lane_width = 3.75
 # refLineRho = lane_width*0.5
@@ -219,11 +219,11 @@ def ipoptSolver():
 
 def plotGraph():
 	# plot graph
-	plt.figure(figsize=(3.5, 3.0))  # 单位英寸， 3.5
+	plt.figure(figsize=(3.5, 1.2))  # 单位英寸， 3.5
 	font1 = {'family': 'Times New Roman', 'weight': 'normal', 'size': 10}
 	plt.rcParams['font.sans-serif'] = ['Times New Roman']  # 如果要显示中文字体，则在此处设为：SimHei
 
-	p1 = [0.2, 0.2, 0.7, 0.6]
+	p1 = [0.15, 0.4, 0.8, 0.4]
 	plt.axes(p1)
 
 	# 调用pathplanner的环境
@@ -233,7 +233,7 @@ def plotGraph():
 	# plot trajectory
 	plt.plot(s, rho_vector, c='cyan', linestyle="-", linewidth=1, alpha=1, label='Refined path')
 
-	car.simVehicle([x_init[2], x_init[3]], 0 * math.pi / 180, 'g', 1)
+	car.simVehicle([x_init[2], x_init[3]], 0 * math.pi / 180, 'b', 1)
 
 	# plot obstacles
 	car.simVehicle([static_obs[0][0], static_obs[0][1]], 0 * math.pi / 180, 'r', 1)
@@ -246,16 +246,17 @@ def plotGraph():
 	plt.ylabel('y (m)', font1)
 	plt.xticks(fontproperties='Times New Roman', fontsize=10)
 	plt.yticks(fontproperties='Times New Roman', fontsize=10)
-	# plt.xlim(-1, 110)
-	# plt.ylim(-4, 4)
-	plt.legend(loc=0)  # 图例位置自动
-	plt.savefig('../SimGraph/pathOptimizationTest_060402.svg')
+	plt.xlim(-1, 102)
+	plt.ylim(-4, 4)
+	# plt.legend(loc=0)  # 图例位置自动
+	plt.savefig('../SimGraph/pathOptimizationTest_060404.svg')
+	plt.savefig('../SimGraph/pathOptimizationTest_060404.tiff',dpi=600)
 
-	plt.figure(figsize=(3.5, 3.5))  # 单位英寸， 3.5
+	plt.figure(figsize=(3.5, 1.2))  # 单位英寸， 3.5
 	font1 = {'family': 'Times New Roman', 'weight': 'normal', 'size': 10}
 	plt.rcParams['font.sans-serif'] = ['Times New Roman']  # 如果要显示中文字体，则在此处设为：SimHei
 
-	p2 = [0.2, 0.2, 0.7, 0.6]
+	p2 = [0.2, 0.35, 0.75, 0.6]
 	plt.axes(p2)
 	kappa_list = trajectory_kappa(rho_vector, s)
 	plt.plot(s[0:n_s + 1], kappa_list, c= 'cyan', linestyle="-", linewidth=0.8, alpha=1, label='Refined Path')
@@ -265,16 +266,17 @@ def plotGraph():
 
 	y = [kappa_max for i in range(n_s + 1)]
 	y2 = [-kappa_max for i in range(n_s + 1)]
-	plt.plot(s[0:n_s + 1], y, c= 'r', linestyle="--", linewidth=0.5, alpha=1, label='Maximum Curvature Limit')
-	plt.plot(s[0:n_s + 1], y2, c= 'orange', linestyle="--", linewidth=0.5, alpha=1, label='Minimum Curvature Limit')
+	# plt.plot(s[0:n_s + 1], y, c= 'r', linestyle="--", linewidth=0.5, alpha=1, label='Maximum Curvature Limit')
+	# plt.plot(s[0:n_s + 1], y2, c= 'orange', linestyle="--", linewidth=0.5, alpha=1, label='Minimum Curvature Limit')
 	plt.title('Curvature Profile', font1)
 	plt.grid(linestyle="--", linewidth=0.5, alpha=1)
 	plt.xlabel('s (m)', font1)
 	plt.ylabel('kappa (1/m)', font1)
-	plt.xlim(-1, 110)
-	plt.ylim(-0.2, 0.2)
-	plt.legend(loc=0)  # 图例位置自动
-	plt.savefig('../SimGraph/pathOptimizationTestKappa_060402.svg')
+	plt.xlim(-1, 102)
+	plt.ylim(-0.12, 0.12)
+	# plt.legend(loc=0)  # 图例位置自动
+	plt.savefig('../SimGraph/pathOptimizationTestKappa_060404.svg')
+	plt.savefig('../SimGraph/pathOptimizationTestKappa_060404.tiff',dpi=600)
 	plt.show()
 
 

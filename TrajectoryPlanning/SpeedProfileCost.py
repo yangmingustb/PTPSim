@@ -46,15 +46,16 @@ init_t = 0
 max_acc = 2.5  # liu chang liu. 2017 IV. speed profile planning
 ref_speed = 12
 
-static_obs = numpy.array([[3, 3.5, 4, 4.5, 5, 5, 5.5, 6, 4, 4.5], [30, 30, 30, 30, 30.0, 60, 60, 60, 60, 60]])
+# static_obs = numpy.array([[3, 3.5, 4, 4.5, 5, 5, 5.5, 6, 4, 4.5], [30, 30, 30, 30, 30.0, 60, 60, 60, 60, 60]])
+static_obs=[]
 r_circle = 1.0
 d_circle = 2.0
 obs_inflation = 1.0
-#   static_obs4 = [6, 30]
+# static_obs4 = [6, 30]
 
-alpha1 = 1.0
+alpha1 = 0.50
 alpha2 = 0.1
-alpha3 = 2
+alpha3 = 0.1
 alpha4 = 150
 alpha5 = 0
 
@@ -116,22 +117,19 @@ def jerk_weight(node, closedset):
 
 def static_obstacles_risk(node):
 	d = math.inf
-	for i in range(static_obs.shape[1]):
-		dt = node.x - static_obs[0][i]
-		ds = node.y - static_obs[1][i]
-		tmp_d = math.sqrt(dt ** 2 + ds ** 2)
-		if tmp_d < d:
-			d = tmp_d
+	if static_obs:
+		for i in range(static_obs.shape[1]):
+			dt = node.x - static_obs[0][i]
+			ds = node.y - static_obs[1][i]
+			tmp_d = math.sqrt(dt ** 2 + ds ** 2)
+			if tmp_d < d:
+				d = tmp_d
 
-	# 如果距离等于0,需要加一个小值使得代价值为一个较大的数，而不是无穷大
-	sigma = 0.00001
-	g = 1 / (d + sigma)
-
-	return g
-
-
-def dynamic_obstacles_risk():
-	pass
+		# 如果距离等于0,需要加一个小值使得代价值为一个较大的数，而不是无穷大
+		sigma = 0.00001
+		g = 1 / (d + sigma)
+		return g
+	else:return 0
 
 
 def total_cost(node, closedset):
