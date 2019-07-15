@@ -66,9 +66,9 @@ def total_cost(father_node, son_node, obstacle, refl, efficients):
 	cost3 = collision_risk(father_node, son_node, obstacle)
 
 
-	print("cost1:%s" % cost1)
-	print("cost2:%s" % cost2)
-	print("cost3:", cost3)
+	# print("cost1:%s" % cost1)
+	# print("cost2:%s" % cost2)
+	# print("cost3:", cost3)
 	#   alpha1 = 550
 
 	cost = alpha1 * cost1 + alpha2 * cost2 + alpha3*cost3

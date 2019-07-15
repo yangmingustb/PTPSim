@@ -122,9 +122,9 @@ rho_max_list = [rho_max for i in range(n_s + 3)]
 def boundValue(efficients):
 	# 等式约束
 	# 注意，这里生成的坐标位置是最右侧车道线的，不是参考线的
-	xr0, yr0, thetar0 = ftc.findEfficients(s0, efficients)
+	xr0, yr0, thetar0 = ftc.search_in_coefficients(s0, efficients)
 	s1 = s0 + reso_s
-	# xr1, yr1, thetar1 = ftc.findEfficients(s1, efficients)
+	# xr1, yr1, thetar1 = ftc.search_in_coefficients(s1, efficients)
 	s2 = s0 + 2 * reso_s
 	xr2, yr2, thetar2 = ftc.frenetToXY(s2, refLineRho, 0, efficients)
 
