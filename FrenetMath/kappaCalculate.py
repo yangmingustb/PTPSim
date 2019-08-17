@@ -19,8 +19,8 @@ def trajectory_kappa(father_node, son_node, efficients):
 	tmp_kappa = []
 	for i in range(0, len(s), 5):
 		x0, y0, theta0 = ftc.frenetToXY(s[i], rho[i],thetaRho[i], efficients)
-		x1, y1, theta1 = ftc.frenetToXY(s[i + 1], rho[i + 1], thetaRho[i], efficients)
-		x2, y2, theta2 = ftc.frenetToXY(s[i + 2], rho[i + 2], thetaRho[i], efficients)
+		x1, y1, theta1 = ftc.frenetToXY(s[i + 1], rho[i + 1], thetaRho[i+1], efficients)
+		x2, y2, theta2 = ftc.frenetToXY(s[i + 2], rho[i + 2], thetaRho[i+2], efficients)
 		k1 = (x1 - x0)*(y2-2*y1+y0)
 		k2 = (y1-y0)*(x2-2*x1+x0)
 		k3 = ((x1-x0)**2+(y1-y0)**2)**(3.0/2.0)
